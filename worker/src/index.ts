@@ -22,6 +22,10 @@ async function main(){
                 value:message.value?.toString(),
             })
             await new Promise(r=>setTimeout(r,1000));
+             
+            //how we do if we have multiple actions like sendemail,sendmoney ,zoom ,ect
+            //for this we parse message and see the type and according to that we just call out functons sendEmail() ,sendMoney() 
+            //this function are present in other folder we just call it here according to job
 
             await consumer.commitOffsets([{
                 topic:TOPIC_NAME,
