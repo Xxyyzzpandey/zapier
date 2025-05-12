@@ -43,7 +43,6 @@ model Action{
    zap  Zap    @relation(fields: [zapId],references: [id])
    actionId String
    type AvailableActions @relation(fields: [actionId],references: [id])
-   sortingOrder  Int  @default(09)
 }
 
 model AvailableActions{
