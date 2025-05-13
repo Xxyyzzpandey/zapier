@@ -7,6 +7,7 @@ import { JWT_PASSWORD } from "../config";
 
 const router=Router();
 
+//@ts-ignore
 router.post("/signup",async (req,res)=> {
     const body=req.body;
     const parsedData=SignupSchema.safeParse(body)
@@ -41,6 +42,7 @@ router.post("/signup",async (req,res)=> {
     })
 })
 
+//@ts-ignore
 router.post("/signin",async(req,res)=>{
      const body =req.body;
      const parsedData=SigninSchema.safeParse(body);
@@ -69,6 +71,7 @@ router.post("/signin",async(req,res)=>{
      })
 })
 
+//@ts-ignore
 router.get("/user",authMiddleware,async(req,res)=>{
     //Todo:fix the type
     //@ts-ignore

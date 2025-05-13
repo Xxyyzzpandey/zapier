@@ -5,7 +5,7 @@ import { prismaClient } from "../db/db";
 
 const router=Router();
 
-
+//@ts-ignore
 router.post("/",authMiddleware,async(req,res)=>{
     const body=req.body
     //@ts-ignore
@@ -50,7 +50,7 @@ router.post("/",authMiddleware,async(req,res)=>{
         zapId
     })
 })
-
+//@ts-ignore
 router.get("/",authMiddleware,async(req,res)=>{
     //@ts-ignore
     const id=req.id;
@@ -76,6 +76,7 @@ router.get("/",authMiddleware,async(req,res)=>{
     })
 })
 
+//@ts-ignore
 router.get("/:zapId",authMiddleware,async(req,res)=>{
     //@ts-ignore
     const id=req.id ;
