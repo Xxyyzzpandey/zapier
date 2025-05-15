@@ -10,5 +10,7 @@ app.use(cors());
 
 app.use("/api/v1/user",userRouter);
 app.use("/api/v1/zap",zapRouter);
+app.use("/api/v1/trigger",triggerRouter);
+app.use("/api/v1/action",actionRouter);
 
 app.listen(3000,()=>console.log("backend listening at port 3000"))
