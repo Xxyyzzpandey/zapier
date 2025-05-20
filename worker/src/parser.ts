@@ -10,7 +10,7 @@ export function parse(text: string, values: any, startDelimeter = "{", endDelime
             while (text[endPoint] !== endDelimeter) {
                 endPoint++;
             }
-            // 
+            
             let stringHoldingValue = text.slice(startIndex + 1, endPoint);
             const keys = stringHoldingValue.split(".");
             let localValues = {
