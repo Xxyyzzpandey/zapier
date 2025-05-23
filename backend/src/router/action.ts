@@ -5,7 +5,7 @@ import { prismaClient } from "../db/db"
 const router=Router()
 
 router.get("/available",async(req ,res)=>{
-    const availableActions=prismaClient.availableActions.findMany({})
+    const availableActions=await prismaClient.availableAction.findMany({})
     res.send({availableActions})
 })
 

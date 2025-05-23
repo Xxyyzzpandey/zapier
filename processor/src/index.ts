@@ -26,7 +26,7 @@ async function main(){
                      value:r.zapRunId
             }))
         })
-        await client.zapRunOutbox.deleteManu({
+        await client.zapRunOutbox.deleteMany({
             where:{
                 id:{
                     in:pendingRows.map(x=>x.id)

@@ -9,6 +9,7 @@ import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { HOOKS_URL } from "@/app/config";
 
 function useAvailableActionsAndTriggers() {
     const [availableActions, setAvailableActions] = useState([]);
@@ -192,46 +193,67 @@ function Modal({ index, onSelect, availableItems }: { index: number, onSelect: (
             </div>
         </div>
          {showGoogleFormPopup && (
-        <div className="fixed inset-0 flex items-center justify-center bg-slate-100 bg-opacity-70 z-60">
-          <div className="bg-white p-6 rounded-lg shadow-md max-w-sm w-full">
-            <h2 className="text-lg font-semibold mb-4">
-             Steps to set up webhook on google form
-            </h2>
-             <ol className="list-decimal pl-5 text-gray-700 space-y-2 mb-4 text-sm">
-                <li>Open your Google Form.</li>
-                <li>Click on the 3 dots (⋮) in the top-right corner and select <strong>'Script Editor'</strong>.</li>
-                <li>In the Apps Script editor, paste the provided code snippet.</li>
-                <li>Replace the webhook URL in the code with your generated Zapier clone webhook URL.</li>
-                <li>Save the script.</li>
-                <li>Go to <strong>Triggers</strong> (clock icon on left sidebar) → Click 'Add Trigger'.</li>
-                <li>Select the <strong>'onFormSubmit'</strong> function, Event type <strong>'On form submit'</strong>, and save.</li>
-                <li>Now every time someone submits the form, it'll send data to your Zap.</li>
-             </ol>
-            <div className="flex justify-end space-x-2">
-              <button
-                onClick={() => setShowGoogleFormPopup(false)}
-                className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={() => {
-                  // continue selecting trigger with metadata (or empty)
-                  onSelect({
-                    id: "google-form-id", // replace with real id if needed
-                    name: "google-form",
-                    metadata: {},
-                  });
-                  setShowGoogleFormPopup(false);
-                }}
-                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-              >
-                Confirm
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+        <div className="fixed inset-0 flex items-center justify-center bg-slate-100 bg-opacity-70 z-50 p-4 overflow-y-auto">
+                <div className="bg-white p-6 rounded-2xl shadow-lg w-full max-w-lg">
+                    <h2 className="text-lg md:text-xl font-semibold mb-4 text-gray-800">
+                    Steps to set up webhook on Google Form
+                    </h2>
+
+                    <ol className="list-decimal pl-5 text-gray-700 space-y-2 mb-6 text-sm md:text-base">
+                    <li>Open your Google Form.</li>
+                    <li>Click the 3 dots (⋮) in the top-right corner and select <strong>'Script Editor'</strong>.</li>
+                    <li>In the Apps Script editor, paste the provided code snippet below.</li>
+
+                    <div className="bg-gray-900 text-green-300 p-4 rounded-lg text-xs md:text-sm overflow-x-auto whitespace-pre-wrap max-w-full break-words">
+                        <pre>
+                {`
+                function onFormSubmit(e) {
+                var formData = e.namedValues;
+
+                var options = {
+                    "method": "post",
+                    "contentType": "application/json",
+                    "payload": JSON.stringify(formData)
+                };
+
+                UrlFetchApp.fetch("${HOOKS_URL}/hooks/catch/1/{zapId}", options);
+                }
+                `}
+                        </pre>
+                    </div>
+
+                    <li><strong>Replace the webhook URL</strong> in the code with your generated Zapier clone webhook URL.</li>
+                    <li>Save the script.</li>
+                    <li>Go to <strong>Triggers</strong> (clock icon on left sidebar) → Click 'Add Trigger'.</li>
+                    <li>Select <strong>'onFormSubmit'</strong> function, Event type <strong>'On form submit'</strong>, then save.</li>
+                    <li>Now, every time someone submits the form, it'll send data to your Zap.</li>
+                    </ol>
+
+                    <div className="flex flex-col-reverse sm:flex-row justify-end gap-3">
+                    <button
+                        onClick={() => setShowGoogleFormPopup(false)}
+                        className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 transition"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        onClick={() => {
+                        onSelect({
+                            id: "google-form-id",
+                            name: "google-form",
+                            metadata: {},
+                        });
+                        setShowGoogleFormPopup(false);
+                        }}
+                        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                    >
+                        Confirm
+                    </button>
+                    </div>
+                </div>
+                </div>
+          )}
     </div>
     
 }

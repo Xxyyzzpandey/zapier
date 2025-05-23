@@ -34,10 +34,10 @@ export type Trigger = $Result.DefaultSelection<Prisma.$TriggerPayload>
  */
 export type Action = $Result.DefaultSelection<Prisma.$ActionPayload>
 /**
- * Model AvailableActions
+ * Model AvailableAction
  * 
  */
-export type AvailableActions = $Result.DefaultSelection<Prisma.$AvailableActionsPayload>
+export type AvailableAction = $Result.DefaultSelection<Prisma.$AvailableActionPayload>
 /**
  * Model AvailableTrigger
  * 
@@ -220,14 +220,14 @@ export class PrismaClient<
   get action(): Prisma.ActionDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.availableActions`: Exposes CRUD operations for the **AvailableActions** model.
+   * `prisma.availableAction`: Exposes CRUD operations for the **AvailableAction** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more AvailableActions
-    * const availableActions = await prisma.availableActions.findMany()
+    * const availableActions = await prisma.availableAction.findMany()
     * ```
     */
-  get availableActions(): Prisma.AvailableActionsDelegate<ExtArgs, ClientOptions>;
+  get availableAction(): Prisma.AvailableActionDelegate<ExtArgs, ClientOptions>;
 
   /**
    * `prisma.availableTrigger`: Exposes CRUD operations for the **AvailableTrigger** model.
@@ -702,7 +702,7 @@ export namespace Prisma {
     Zap: 'Zap',
     Trigger: 'Trigger',
     Action: 'Action',
-    AvailableActions: 'AvailableActions',
+    AvailableAction: 'AvailableAction',
     AvailableTrigger: 'AvailableTrigger',
     ZapRun: 'ZapRun',
     ZapRunOutbox: 'ZapRunOutbox'
@@ -724,7 +724,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user" | "zap" | "trigger" | "action" | "availableActions" | "availableTrigger" | "zapRun" | "zapRunOutbox"
+      modelProps: "user" | "zap" | "trigger" | "action" | "availableAction" | "availableTrigger" | "zapRun" | "zapRunOutbox"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -1024,77 +1024,77 @@ export namespace Prisma {
           }
         }
       }
-      AvailableActions: {
-        payload: Prisma.$AvailableActionsPayload<ExtArgs>
-        fields: Prisma.AvailableActionsFieldRefs
+      AvailableAction: {
+        payload: Prisma.$AvailableActionPayload<ExtArgs>
+        fields: Prisma.AvailableActionFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.AvailableActionsFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AvailableActionsPayload> | null
+            args: Prisma.AvailableActionFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AvailableActionPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.AvailableActionsFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AvailableActionsPayload>
+            args: Prisma.AvailableActionFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AvailableActionPayload>
           }
           findFirst: {
-            args: Prisma.AvailableActionsFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AvailableActionsPayload> | null
+            args: Prisma.AvailableActionFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AvailableActionPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.AvailableActionsFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AvailableActionsPayload>
+            args: Prisma.AvailableActionFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AvailableActionPayload>
           }
           findMany: {
-            args: Prisma.AvailableActionsFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AvailableActionsPayload>[]
+            args: Prisma.AvailableActionFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AvailableActionPayload>[]
           }
           create: {
-            args: Prisma.AvailableActionsCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AvailableActionsPayload>
+            args: Prisma.AvailableActionCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AvailableActionPayload>
           }
           createMany: {
-            args: Prisma.AvailableActionsCreateManyArgs<ExtArgs>
+            args: Prisma.AvailableActionCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.AvailableActionsCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AvailableActionsPayload>[]
+            args: Prisma.AvailableActionCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AvailableActionPayload>[]
           }
           delete: {
-            args: Prisma.AvailableActionsDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AvailableActionsPayload>
+            args: Prisma.AvailableActionDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AvailableActionPayload>
           }
           update: {
-            args: Prisma.AvailableActionsUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AvailableActionsPayload>
+            args: Prisma.AvailableActionUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AvailableActionPayload>
           }
           deleteMany: {
-            args: Prisma.AvailableActionsDeleteManyArgs<ExtArgs>
+            args: Prisma.AvailableActionDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.AvailableActionsUpdateManyArgs<ExtArgs>
+            args: Prisma.AvailableActionUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.AvailableActionsUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AvailableActionsPayload>[]
+            args: Prisma.AvailableActionUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AvailableActionPayload>[]
           }
           upsert: {
-            args: Prisma.AvailableActionsUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AvailableActionsPayload>
+            args: Prisma.AvailableActionUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AvailableActionPayload>
           }
           aggregate: {
-            args: Prisma.AvailableActionsAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateAvailableActions>
+            args: Prisma.AvailableActionAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateAvailableAction>
           }
           groupBy: {
-            args: Prisma.AvailableActionsGroupByArgs<ExtArgs>
-            result: $Utils.Optional<AvailableActionsGroupByOutputType>[]
+            args: Prisma.AvailableActionGroupByArgs<ExtArgs>
+            result: $Utils.Optional<AvailableActionGroupByOutputType>[]
           }
           count: {
-            args: Prisma.AvailableActionsCountArgs<ExtArgs>
-            result: $Utils.Optional<AvailableActionsCountAggregateOutputType> | number
+            args: Prisma.AvailableActionCountArgs<ExtArgs>
+            result: $Utils.Optional<AvailableActionCountAggregateOutputType> | number
           }
         }
       }
@@ -1408,7 +1408,7 @@ export namespace Prisma {
     zap?: ZapOmit
     trigger?: TriggerOmit
     action?: ActionOmit
-    availableActions?: AvailableActionsOmit
+    availableAction?: AvailableActionOmit
     availableTrigger?: AvailableTriggerOmit
     zapRun?: ZapRunOmit
     zapRunOutbox?: ZapRunOutboxOmit
@@ -1502,6 +1502,37 @@ export namespace Prisma {
 
 
   /**
+   * Count Type UserCountOutputType
+   */
+
+  export type UserCountOutputType = {
+    zaps: number
+  }
+
+  export type UserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    zaps?: boolean | UserCountOutputTypeCountZapsArgs
+  }
+
+  // Custom InputTypes
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the UserCountOutputType
+     */
+    select?: UserCountOutputTypeSelect<ExtArgs> | null
+  }
+
+  /**
+   * UserCountOutputType without action
+   */
+  export type UserCountOutputTypeCountZapsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ZapWhereInput
+  }
+
+
+  /**
    * Count Type ZapCountOutputType
    */
 
@@ -1542,32 +1573,32 @@ export namespace Prisma {
 
 
   /**
-   * Count Type AvailableActionsCountOutputType
+   * Count Type AvailableActionCountOutputType
    */
 
-  export type AvailableActionsCountOutputType = {
-    trigger: number
+  export type AvailableActionCountOutputType = {
+    actions: number
   }
 
-  export type AvailableActionsCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    trigger?: boolean | AvailableActionsCountOutputTypeCountTriggerArgs
+  export type AvailableActionCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    actions?: boolean | AvailableActionCountOutputTypeCountActionsArgs
   }
 
   // Custom InputTypes
   /**
-   * AvailableActionsCountOutputType without action
+   * AvailableActionCountOutputType without action
    */
-  export type AvailableActionsCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AvailableActionsCountOutputType
+     * Select specific fields to fetch from the AvailableActionCountOutputType
      */
-    select?: AvailableActionsCountOutputTypeSelect<ExtArgs> | null
+    select?: AvailableActionCountOutputTypeSelect<ExtArgs> | null
   }
 
   /**
-   * AvailableActionsCountOutputType without action
+   * AvailableActionCountOutputType without action
    */
-  export type AvailableActionsCountOutputTypeCountTriggerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionCountOutputTypeCountActionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: ActionWhereInput
   }
 
@@ -1577,11 +1608,11 @@ export namespace Prisma {
    */
 
   export type AvailableTriggerCountOutputType = {
-    trigger: number
+    triggers: number
   }
 
   export type AvailableTriggerCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    trigger?: boolean | AvailableTriggerCountOutputTypeCountTriggerArgs
+    triggers?: boolean | AvailableTriggerCountOutputTypeCountTriggersArgs
   }
 
   // Custom InputTypes
@@ -1598,7 +1629,7 @@ export namespace Prisma {
   /**
    * AvailableTriggerCountOutputType without action
    */
-  export type AvailableTriggerCountOutputTypeCountTriggerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableTriggerCountOutputTypeCountTriggersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: TriggerWhereInput
   }
 
@@ -1797,6 +1828,8 @@ export namespace Prisma {
     name?: boolean
     email?: boolean
     password?: boolean
+    zaps?: boolean | User$zapsArgs<ExtArgs>
+    _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -1821,10 +1854,18 @@ export namespace Prisma {
   }
 
   export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "password", ExtArgs["result"]["user"]>
+  export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    zaps?: boolean | User$zapsArgs<ExtArgs>
+    _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
+  }
+  export type UserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type UserIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
-    objects: {}
+    objects: {
+      zaps: Prisma.$ZapPayload<ExtArgs>[]
+    }
     scalars: $Extensions.GetPayloadResult<{
       id: number
       name: string
@@ -2224,6 +2265,7 @@ export namespace Prisma {
    */
   export interface Prisma__UserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
+    zaps<T extends User$zapsArgs<ExtArgs> = {}>(args?: Subset<T, User$zapsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ZapPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2274,6 +2316,10 @@ export namespace Prisma {
      */
     omit?: UserOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserInclude<ExtArgs> | null
+    /**
      * Filter, which User to fetch.
      */
     where: UserWhereUniqueInput
@@ -2292,6 +2338,10 @@ export namespace Prisma {
      */
     omit?: UserOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserInclude<ExtArgs> | null
+    /**
      * Filter, which User to fetch.
      */
     where: UserWhereUniqueInput
@@ -2309,6 +2359,10 @@ export namespace Prisma {
      * Omit specific fields from the User
      */
     omit?: UserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserInclude<ExtArgs> | null
     /**
      * Filter, which User to fetch.
      */
@@ -2358,6 +2412,10 @@ export namespace Prisma {
      */
     omit?: UserOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserInclude<ExtArgs> | null
+    /**
      * Filter, which User to fetch.
      */
     where?: UserWhereInput
@@ -2406,6 +2464,10 @@ export namespace Prisma {
      */
     omit?: UserOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserInclude<ExtArgs> | null
+    /**
      * Filter, which Users to fetch.
      */
     where?: UserWhereInput
@@ -2448,6 +2510,10 @@ export namespace Prisma {
      * Omit specific fields from the User
      */
     omit?: UserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserInclude<ExtArgs> | null
     /**
      * The data needed to create a User.
      */
@@ -2496,6 +2562,10 @@ export namespace Prisma {
      * Omit specific fields from the User
      */
     omit?: UserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserInclude<ExtArgs> | null
     /**
      * The data needed to update a User.
      */
@@ -2563,6 +2633,10 @@ export namespace Prisma {
      */
     omit?: UserOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserInclude<ExtArgs> | null
+    /**
      * The filter to search for the User to update in case it exists.
      */
     where: UserWhereUniqueInput
@@ -2589,6 +2663,10 @@ export namespace Prisma {
      */
     omit?: UserOmit<ExtArgs> | null
     /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserInclude<ExtArgs> | null
+    /**
      * Filter which User to delete.
      */
     where: UserWhereUniqueInput
@@ -2609,6 +2687,30 @@ export namespace Prisma {
   }
 
   /**
+   * User.zaps
+   */
+  export type User$zapsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Zap
+     */
+    select?: ZapSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Zap
+     */
+    omit?: ZapOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ZapInclude<ExtArgs> | null
+    where?: ZapWhereInput
+    orderBy?: ZapOrderByWithRelationInput | ZapOrderByWithRelationInput[]
+    cursor?: ZapWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ZapScalarFieldEnum | ZapScalarFieldEnum[]
+  }
+
+  /**
    * User without action
    */
   export type UserDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -2620,6 +2722,10 @@ export namespace Prisma {
      * Omit specific fields from the User
      */
     omit?: UserOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: UserInclude<ExtArgs> | null
   }
 
 
@@ -2629,40 +2735,64 @@ export namespace Prisma {
 
   export type AggregateZap = {
     _count: ZapCountAggregateOutputType | null
+    _avg: ZapAvgAggregateOutputType | null
+    _sum: ZapSumAggregateOutputType | null
     _min: ZapMinAggregateOutputType | null
     _max: ZapMaxAggregateOutputType | null
+  }
+
+  export type ZapAvgAggregateOutputType = {
+    userId: number | null
+  }
+
+  export type ZapSumAggregateOutputType = {
+    userId: number | null
   }
 
   export type ZapMinAggregateOutputType = {
     id: string | null
     triggerId: string | null
+    userId: number | null
   }
 
   export type ZapMaxAggregateOutputType = {
     id: string | null
     triggerId: string | null
+    userId: number | null
   }
 
   export type ZapCountAggregateOutputType = {
     id: number
     triggerId: number
+    userId: number
     _all: number
   }
 
 
+  export type ZapAvgAggregateInputType = {
+    userId?: true
+  }
+
+  export type ZapSumAggregateInputType = {
+    userId?: true
+  }
+
   export type ZapMinAggregateInputType = {
     id?: true
     triggerId?: true
+    userId?: true
   }
 
   export type ZapMaxAggregateInputType = {
     id?: true
     triggerId?: true
+    userId?: true
   }
 
   export type ZapCountAggregateInputType = {
     id?: true
     triggerId?: true
+    userId?: true
     _all?: true
   }
 
@@ -2704,6 +2834,18 @@ export namespace Prisma {
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
+     * Select which fields to average
+    **/
+    _avg?: ZapAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: ZapSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
      * Select which fields to find the minimum value
     **/
     _min?: ZapMinAggregateInputType
@@ -2734,6 +2876,8 @@ export namespace Prisma {
     take?: number
     skip?: number
     _count?: ZapCountAggregateInputType | true
+    _avg?: ZapAvgAggregateInputType
+    _sum?: ZapSumAggregateInputType
     _min?: ZapMinAggregateInputType
     _max?: ZapMaxAggregateInputType
   }
@@ -2741,7 +2885,10 @@ export namespace Prisma {
   export type ZapGroupByOutputType = {
     id: string
     triggerId: string
+    userId: number
     _count: ZapCountAggregateOutputType | null
+    _avg: ZapAvgAggregateOutputType | null
+    _sum: ZapSumAggregateOutputType | null
     _min: ZapMinAggregateOutputType | null
     _max: ZapMaxAggregateOutputType | null
   }
@@ -2763,36 +2910,48 @@ export namespace Prisma {
   export type ZapSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     triggerId?: boolean
+    userId?: boolean
     trigger?: boolean | Zap$triggerArgs<ExtArgs>
     actions?: boolean | Zap$actionsArgs<ExtArgs>
     zapRuns?: boolean | Zap$zapRunsArgs<ExtArgs>
+    user?: boolean | UserDefaultArgs<ExtArgs>
     _count?: boolean | ZapCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["zap"]>
 
   export type ZapSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     triggerId?: boolean
+    userId?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["zap"]>
 
   export type ZapSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     triggerId?: boolean
+    userId?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["zap"]>
 
   export type ZapSelectScalar = {
     id?: boolean
     triggerId?: boolean
+    userId?: boolean
   }
 
-  export type ZapOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "triggerId", ExtArgs["result"]["zap"]>
+  export type ZapOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "triggerId" | "userId", ExtArgs["result"]["zap"]>
   export type ZapInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     trigger?: boolean | Zap$triggerArgs<ExtArgs>
     actions?: boolean | Zap$actionsArgs<ExtArgs>
     zapRuns?: boolean | Zap$zapRunsArgs<ExtArgs>
+    user?: boolean | UserDefaultArgs<ExtArgs>
     _count?: boolean | ZapCountOutputTypeDefaultArgs<ExtArgs>
   }
-  export type ZapIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
-  export type ZapIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type ZapIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
+  export type ZapIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }
 
   export type $ZapPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Zap"
@@ -2800,10 +2959,12 @@ export namespace Prisma {
       trigger: Prisma.$TriggerPayload<ExtArgs> | null
       actions: Prisma.$ActionPayload<ExtArgs>[]
       zapRuns: Prisma.$ZapRunPayload<ExtArgs>[]
+      user: Prisma.$UserPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
       triggerId: string
+      userId: number
     }, ExtArgs["result"]["zap"]>
     composites: {}
   }
@@ -3201,6 +3362,7 @@ export namespace Prisma {
     trigger<T extends Zap$triggerArgs<ExtArgs> = {}>(args?: Subset<T, Zap$triggerArgs<ExtArgs>>): Prisma__TriggerClient<$Result.GetResult<Prisma.$TriggerPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
     actions<T extends Zap$actionsArgs<ExtArgs> = {}>(args?: Subset<T, Zap$actionsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ActionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     zapRuns<T extends Zap$zapRunsArgs<ExtArgs> = {}>(args?: Subset<T, Zap$zapRunsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ZapRunPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -3232,6 +3394,7 @@ export namespace Prisma {
   interface ZapFieldRefs {
     readonly id: FieldRef<"Zap", 'String'>
     readonly triggerId: FieldRef<"Zap", 'String'>
+    readonly userId: FieldRef<"Zap", 'Int'>
   }
     
 
@@ -3481,6 +3644,10 @@ export namespace Prisma {
      */
     data: ZapCreateManyInput | ZapCreateManyInput[]
     skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ZapIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -3551,6 +3718,10 @@ export namespace Prisma {
      * Limit how many Zaps to update.
      */
     limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ZapIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -3731,6 +3902,7 @@ export namespace Prisma {
     id: number
     zapId: number
     triggerId: number
+    metadata: number
     _all: number
   }
 
@@ -3751,6 +3923,7 @@ export namespace Prisma {
     id?: true
     zapId?: true
     triggerId?: true
+    metadata?: true
     _all?: true
   }
 
@@ -3830,6 +4003,7 @@ export namespace Prisma {
     id: string
     zapId: string
     triggerId: string
+    metadata: JsonValue
     _count: TriggerCountAggregateOutputType | null
     _min: TriggerMinAggregateOutputType | null
     _max: TriggerMaxAggregateOutputType | null
@@ -3853,6 +4027,7 @@ export namespace Prisma {
     id?: boolean
     zapId?: boolean
     triggerId?: boolean
+    metadata?: boolean
     type?: boolean | AvailableTriggerDefaultArgs<ExtArgs>
     zap?: boolean | ZapDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["trigger"]>
@@ -3861,6 +4036,7 @@ export namespace Prisma {
     id?: boolean
     zapId?: boolean
     triggerId?: boolean
+    metadata?: boolean
     type?: boolean | AvailableTriggerDefaultArgs<ExtArgs>
     zap?: boolean | ZapDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["trigger"]>
@@ -3869,6 +4045,7 @@ export namespace Prisma {
     id?: boolean
     zapId?: boolean
     triggerId?: boolean
+    metadata?: boolean
     type?: boolean | AvailableTriggerDefaultArgs<ExtArgs>
     zap?: boolean | ZapDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["trigger"]>
@@ -3877,9 +4054,10 @@ export namespace Prisma {
     id?: boolean
     zapId?: boolean
     triggerId?: boolean
+    metadata?: boolean
   }
 
-  export type TriggerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "zapId" | "triggerId", ExtArgs["result"]["trigger"]>
+  export type TriggerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "zapId" | "triggerId" | "metadata", ExtArgs["result"]["trigger"]>
   export type TriggerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     type?: boolean | AvailableTriggerDefaultArgs<ExtArgs>
     zap?: boolean | ZapDefaultArgs<ExtArgs>
@@ -3903,6 +4081,7 @@ export namespace Prisma {
       id: string
       zapId: string
       triggerId: string
+      metadata: Prisma.JsonValue
     }, ExtArgs["result"]["trigger"]>
     composites: {}
   }
@@ -4331,6 +4510,7 @@ export namespace Prisma {
     readonly id: FieldRef<"Trigger", 'String'>
     readonly zapId: FieldRef<"Trigger", 'String'>
     readonly triggerId: FieldRef<"Trigger", 'String'>
+    readonly metadata: FieldRef<"Trigger", 'Json'>
   }
     
 
@@ -4783,6 +4963,7 @@ export namespace Prisma {
     id: number
     zapId: number
     actionId: number
+    metadata: number
     sortingOrder: number
     _all: number
   }
@@ -4814,6 +4995,7 @@ export namespace Prisma {
     id?: true
     zapId?: true
     actionId?: true
+    metadata?: true
     sortingOrder?: true
     _all?: true
   }
@@ -4908,6 +5090,7 @@ export namespace Prisma {
     id: string
     zapId: string
     actionId: string
+    metadata: JsonValue
     sortingOrder: number
     _count: ActionCountAggregateOutputType | null
     _avg: ActionAvgAggregateOutputType | null
@@ -4934,60 +5117,65 @@ export namespace Prisma {
     id?: boolean
     zapId?: boolean
     actionId?: boolean
+    metadata?: boolean
     sortingOrder?: boolean
     zap?: boolean | ZapDefaultArgs<ExtArgs>
-    type?: boolean | AvailableActionsDefaultArgs<ExtArgs>
+    type?: boolean | AvailableActionDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["action"]>
 
   export type ActionSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     zapId?: boolean
     actionId?: boolean
+    metadata?: boolean
     sortingOrder?: boolean
     zap?: boolean | ZapDefaultArgs<ExtArgs>
-    type?: boolean | AvailableActionsDefaultArgs<ExtArgs>
+    type?: boolean | AvailableActionDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["action"]>
 
   export type ActionSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     zapId?: boolean
     actionId?: boolean
+    metadata?: boolean
     sortingOrder?: boolean
     zap?: boolean | ZapDefaultArgs<ExtArgs>
-    type?: boolean | AvailableActionsDefaultArgs<ExtArgs>
+    type?: boolean | AvailableActionDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["action"]>
 
   export type ActionSelectScalar = {
     id?: boolean
     zapId?: boolean
     actionId?: boolean
+    metadata?: boolean
     sortingOrder?: boolean
   }
 
-  export type ActionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "zapId" | "actionId" | "sortingOrder", ExtArgs["result"]["action"]>
+  export type ActionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "zapId" | "actionId" | "metadata" | "sortingOrder", ExtArgs["result"]["action"]>
   export type ActionInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     zap?: boolean | ZapDefaultArgs<ExtArgs>
-    type?: boolean | AvailableActionsDefaultArgs<ExtArgs>
+    type?: boolean | AvailableActionDefaultArgs<ExtArgs>
   }
   export type ActionIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     zap?: boolean | ZapDefaultArgs<ExtArgs>
-    type?: boolean | AvailableActionsDefaultArgs<ExtArgs>
+    type?: boolean | AvailableActionDefaultArgs<ExtArgs>
   }
   export type ActionIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     zap?: boolean | ZapDefaultArgs<ExtArgs>
-    type?: boolean | AvailableActionsDefaultArgs<ExtArgs>
+    type?: boolean | AvailableActionDefaultArgs<ExtArgs>
   }
 
   export type $ActionPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Action"
     objects: {
       zap: Prisma.$ZapPayload<ExtArgs>
-      type: Prisma.$AvailableActionsPayload<ExtArgs>
+      type: Prisma.$AvailableActionPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
       zapId: string
       actionId: string
+      metadata: Prisma.JsonValue
       sortingOrder: number
     }, ExtArgs["result"]["action"]>
     composites: {}
@@ -5384,7 +5572,7 @@ export namespace Prisma {
   export interface Prisma__ActionClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     zap<T extends ZapDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ZapDefaultArgs<ExtArgs>>): Prisma__ZapClient<$Result.GetResult<Prisma.$ZapPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-    type<T extends AvailableActionsDefaultArgs<ExtArgs> = {}>(args?: Subset<T, AvailableActionsDefaultArgs<ExtArgs>>): Prisma__AvailableActionsClient<$Result.GetResult<Prisma.$AvailableActionsPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    type<T extends AvailableActionDefaultArgs<ExtArgs> = {}>(args?: Subset<T, AvailableActionDefaultArgs<ExtArgs>>): Prisma__AvailableActionClient<$Result.GetResult<Prisma.$AvailableActionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -5417,6 +5605,7 @@ export namespace Prisma {
     readonly id: FieldRef<"Action", 'String'>
     readonly zapId: FieldRef<"Action", 'String'>
     readonly actionId: FieldRef<"Action", 'String'>
+    readonly metadata: FieldRef<"Action", 'Json'>
     readonly sortingOrder: FieldRef<"Action", 'Int'>
   }
     
@@ -5833,65 +6022,71 @@ export namespace Prisma {
 
 
   /**
-   * Model AvailableActions
+   * Model AvailableAction
    */
 
-  export type AggregateAvailableActions = {
-    _count: AvailableActionsCountAggregateOutputType | null
-    _min: AvailableActionsMinAggregateOutputType | null
-    _max: AvailableActionsMaxAggregateOutputType | null
+  export type AggregateAvailableAction = {
+    _count: AvailableActionCountAggregateOutputType | null
+    _min: AvailableActionMinAggregateOutputType | null
+    _max: AvailableActionMaxAggregateOutputType | null
   }
 
-  export type AvailableActionsMinAggregateOutputType = {
+  export type AvailableActionMinAggregateOutputType = {
     id: string | null
     name: string | null
+    image: string | null
   }
 
-  export type AvailableActionsMaxAggregateOutputType = {
+  export type AvailableActionMaxAggregateOutputType = {
     id: string | null
     name: string | null
+    image: string | null
   }
 
-  export type AvailableActionsCountAggregateOutputType = {
+  export type AvailableActionCountAggregateOutputType = {
     id: number
     name: number
+    image: number
     _all: number
   }
 
 
-  export type AvailableActionsMinAggregateInputType = {
+  export type AvailableActionMinAggregateInputType = {
     id?: true
     name?: true
+    image?: true
   }
 
-  export type AvailableActionsMaxAggregateInputType = {
+  export type AvailableActionMaxAggregateInputType = {
     id?: true
     name?: true
+    image?: true
   }
 
-  export type AvailableActionsCountAggregateInputType = {
+  export type AvailableActionCountAggregateInputType = {
     id?: true
     name?: true
+    image?: true
     _all?: true
   }
 
-  export type AvailableActionsAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which AvailableActions to aggregate.
+     * Filter which AvailableAction to aggregate.
      */
-    where?: AvailableActionsWhereInput
+    where?: AvailableActionWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
      * Determine the order of AvailableActions to fetch.
      */
-    orderBy?: AvailableActionsOrderByWithRelationInput | AvailableActionsOrderByWithRelationInput[]
+    orderBy?: AvailableActionOrderByWithRelationInput | AvailableActionOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: AvailableActionsWhereUniqueInput
+    cursor?: AvailableActionWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
@@ -5909,234 +6104,240 @@ export namespace Prisma {
      * 
      * Count returned AvailableActions
     **/
-    _count?: true | AvailableActionsCountAggregateInputType
+    _count?: true | AvailableActionCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: AvailableActionsMinAggregateInputType
+    _min?: AvailableActionMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: AvailableActionsMaxAggregateInputType
+    _max?: AvailableActionMaxAggregateInputType
   }
 
-  export type GetAvailableActionsAggregateType<T extends AvailableActionsAggregateArgs> = {
-        [P in keyof T & keyof AggregateAvailableActions]: P extends '_count' | 'count'
+  export type GetAvailableActionAggregateType<T extends AvailableActionAggregateArgs> = {
+        [P in keyof T & keyof AggregateAvailableAction]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateAvailableActions[P]>
-      : GetScalarType<T[P], AggregateAvailableActions[P]>
+        : GetScalarType<T[P], AggregateAvailableAction[P]>
+      : GetScalarType<T[P], AggregateAvailableAction[P]>
   }
 
 
 
 
-  export type AvailableActionsGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: AvailableActionsWhereInput
-    orderBy?: AvailableActionsOrderByWithAggregationInput | AvailableActionsOrderByWithAggregationInput[]
-    by: AvailableActionsScalarFieldEnum[] | AvailableActionsScalarFieldEnum
-    having?: AvailableActionsScalarWhereWithAggregatesInput
+  export type AvailableActionGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AvailableActionWhereInput
+    orderBy?: AvailableActionOrderByWithAggregationInput | AvailableActionOrderByWithAggregationInput[]
+    by: AvailableActionScalarFieldEnum[] | AvailableActionScalarFieldEnum
+    having?: AvailableActionScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: AvailableActionsCountAggregateInputType | true
-    _min?: AvailableActionsMinAggregateInputType
-    _max?: AvailableActionsMaxAggregateInputType
+    _count?: AvailableActionCountAggregateInputType | true
+    _min?: AvailableActionMinAggregateInputType
+    _max?: AvailableActionMaxAggregateInputType
   }
 
-  export type AvailableActionsGroupByOutputType = {
+  export type AvailableActionGroupByOutputType = {
     id: string
     name: string
-    _count: AvailableActionsCountAggregateOutputType | null
-    _min: AvailableActionsMinAggregateOutputType | null
-    _max: AvailableActionsMaxAggregateOutputType | null
+    image: string
+    _count: AvailableActionCountAggregateOutputType | null
+    _min: AvailableActionMinAggregateOutputType | null
+    _max: AvailableActionMaxAggregateOutputType | null
   }
 
-  type GetAvailableActionsGroupByPayload<T extends AvailableActionsGroupByArgs> = Prisma.PrismaPromise<
+  type GetAvailableActionGroupByPayload<T extends AvailableActionGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<AvailableActionsGroupByOutputType, T['by']> &
+      PickEnumerable<AvailableActionGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof AvailableActionsGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof AvailableActionGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], AvailableActionsGroupByOutputType[P]>
-            : GetScalarType<T[P], AvailableActionsGroupByOutputType[P]>
+              : GetScalarType<T[P], AvailableActionGroupByOutputType[P]>
+            : GetScalarType<T[P], AvailableActionGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type AvailableActionsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type AvailableActionSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-    trigger?: boolean | AvailableActions$triggerArgs<ExtArgs>
-    _count?: boolean | AvailableActionsCountOutputTypeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["availableActions"]>
+    image?: boolean
+    actions?: boolean | AvailableAction$actionsArgs<ExtArgs>
+    _count?: boolean | AvailableActionCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["availableAction"]>
 
-  export type AvailableActionsSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type AvailableActionSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-  }, ExtArgs["result"]["availableActions"]>
+    image?: boolean
+  }, ExtArgs["result"]["availableAction"]>
 
-  export type AvailableActionsSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type AvailableActionSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-  }, ExtArgs["result"]["availableActions"]>
+    image?: boolean
+  }, ExtArgs["result"]["availableAction"]>
 
-  export type AvailableActionsSelectScalar = {
+  export type AvailableActionSelectScalar = {
     id?: boolean
     name?: boolean
+    image?: boolean
   }
 
-  export type AvailableActionsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name", ExtArgs["result"]["availableActions"]>
-  export type AvailableActionsInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    trigger?: boolean | AvailableActions$triggerArgs<ExtArgs>
-    _count?: boolean | AvailableActionsCountOutputTypeDefaultArgs<ExtArgs>
+  export type AvailableActionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "image", ExtArgs["result"]["availableAction"]>
+  export type AvailableActionInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    actions?: boolean | AvailableAction$actionsArgs<ExtArgs>
+    _count?: boolean | AvailableActionCountOutputTypeDefaultArgs<ExtArgs>
   }
-  export type AvailableActionsIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
-  export type AvailableActionsIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type AvailableActionIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type AvailableActionIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
-  export type $AvailableActionsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "AvailableActions"
+  export type $AvailableActionPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "AvailableAction"
     objects: {
-      trigger: Prisma.$ActionPayload<ExtArgs>[]
+      actions: Prisma.$ActionPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
       name: string
-    }, ExtArgs["result"]["availableActions"]>
+      image: string
+    }, ExtArgs["result"]["availableAction"]>
     composites: {}
   }
 
-  type AvailableActionsGetPayload<S extends boolean | null | undefined | AvailableActionsDefaultArgs> = $Result.GetResult<Prisma.$AvailableActionsPayload, S>
+  type AvailableActionGetPayload<S extends boolean | null | undefined | AvailableActionDefaultArgs> = $Result.GetResult<Prisma.$AvailableActionPayload, S>
 
-  type AvailableActionsCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<AvailableActionsFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: AvailableActionsCountAggregateInputType | true
+  type AvailableActionCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<AvailableActionFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: AvailableActionCountAggregateInputType | true
     }
 
-  export interface AvailableActionsDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['AvailableActions'], meta: { name: 'AvailableActions' } }
+  export interface AvailableActionDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['AvailableAction'], meta: { name: 'AvailableAction' } }
     /**
-     * Find zero or one AvailableActions that matches the filter.
-     * @param {AvailableActionsFindUniqueArgs} args - Arguments to find a AvailableActions
+     * Find zero or one AvailableAction that matches the filter.
+     * @param {AvailableActionFindUniqueArgs} args - Arguments to find a AvailableAction
      * @example
-     * // Get one AvailableActions
-     * const availableActions = await prisma.availableActions.findUnique({
+     * // Get one AvailableAction
+     * const availableAction = await prisma.availableAction.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends AvailableActionsFindUniqueArgs>(args: SelectSubset<T, AvailableActionsFindUniqueArgs<ExtArgs>>): Prisma__AvailableActionsClient<$Result.GetResult<Prisma.$AvailableActionsPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends AvailableActionFindUniqueArgs>(args: SelectSubset<T, AvailableActionFindUniqueArgs<ExtArgs>>): Prisma__AvailableActionClient<$Result.GetResult<Prisma.$AvailableActionPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one AvailableActions that matches the filter or throw an error with `error.code='P2025'`
+     * Find one AvailableAction that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {AvailableActionsFindUniqueOrThrowArgs} args - Arguments to find a AvailableActions
+     * @param {AvailableActionFindUniqueOrThrowArgs} args - Arguments to find a AvailableAction
      * @example
-     * // Get one AvailableActions
-     * const availableActions = await prisma.availableActions.findUniqueOrThrow({
+     * // Get one AvailableAction
+     * const availableAction = await prisma.availableAction.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends AvailableActionsFindUniqueOrThrowArgs>(args: SelectSubset<T, AvailableActionsFindUniqueOrThrowArgs<ExtArgs>>): Prisma__AvailableActionsClient<$Result.GetResult<Prisma.$AvailableActionsPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends AvailableActionFindUniqueOrThrowArgs>(args: SelectSubset<T, AvailableActionFindUniqueOrThrowArgs<ExtArgs>>): Prisma__AvailableActionClient<$Result.GetResult<Prisma.$AvailableActionPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first AvailableActions that matches the filter.
+     * Find the first AvailableAction that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AvailableActionsFindFirstArgs} args - Arguments to find a AvailableActions
+     * @param {AvailableActionFindFirstArgs} args - Arguments to find a AvailableAction
      * @example
-     * // Get one AvailableActions
-     * const availableActions = await prisma.availableActions.findFirst({
+     * // Get one AvailableAction
+     * const availableAction = await prisma.availableAction.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends AvailableActionsFindFirstArgs>(args?: SelectSubset<T, AvailableActionsFindFirstArgs<ExtArgs>>): Prisma__AvailableActionsClient<$Result.GetResult<Prisma.$AvailableActionsPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends AvailableActionFindFirstArgs>(args?: SelectSubset<T, AvailableActionFindFirstArgs<ExtArgs>>): Prisma__AvailableActionClient<$Result.GetResult<Prisma.$AvailableActionPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first AvailableActions that matches the filter or
+     * Find the first AvailableAction that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AvailableActionsFindFirstOrThrowArgs} args - Arguments to find a AvailableActions
+     * @param {AvailableActionFindFirstOrThrowArgs} args - Arguments to find a AvailableAction
      * @example
-     * // Get one AvailableActions
-     * const availableActions = await prisma.availableActions.findFirstOrThrow({
+     * // Get one AvailableAction
+     * const availableAction = await prisma.availableAction.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends AvailableActionsFindFirstOrThrowArgs>(args?: SelectSubset<T, AvailableActionsFindFirstOrThrowArgs<ExtArgs>>): Prisma__AvailableActionsClient<$Result.GetResult<Prisma.$AvailableActionsPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends AvailableActionFindFirstOrThrowArgs>(args?: SelectSubset<T, AvailableActionFindFirstOrThrowArgs<ExtArgs>>): Prisma__AvailableActionClient<$Result.GetResult<Prisma.$AvailableActionPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find zero or more AvailableActions that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AvailableActionsFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {AvailableActionFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all AvailableActions
-     * const availableActions = await prisma.availableActions.findMany()
+     * const availableActions = await prisma.availableAction.findMany()
      * 
      * // Get first 10 AvailableActions
-     * const availableActions = await prisma.availableActions.findMany({ take: 10 })
+     * const availableActions = await prisma.availableAction.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const availableActionsWithIdOnly = await prisma.availableActions.findMany({ select: { id: true } })
+     * const availableActionWithIdOnly = await prisma.availableAction.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends AvailableActionsFindManyArgs>(args?: SelectSubset<T, AvailableActionsFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AvailableActionsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends AvailableActionFindManyArgs>(args?: SelectSubset<T, AvailableActionFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AvailableActionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a AvailableActions.
-     * @param {AvailableActionsCreateArgs} args - Arguments to create a AvailableActions.
+     * Create a AvailableAction.
+     * @param {AvailableActionCreateArgs} args - Arguments to create a AvailableAction.
      * @example
-     * // Create one AvailableActions
-     * const AvailableActions = await prisma.availableActions.create({
+     * // Create one AvailableAction
+     * const AvailableAction = await prisma.availableAction.create({
      *   data: {
-     *     // ... data to create a AvailableActions
+     *     // ... data to create a AvailableAction
      *   }
      * })
      * 
      */
-    create<T extends AvailableActionsCreateArgs>(args: SelectSubset<T, AvailableActionsCreateArgs<ExtArgs>>): Prisma__AvailableActionsClient<$Result.GetResult<Prisma.$AvailableActionsPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends AvailableActionCreateArgs>(args: SelectSubset<T, AvailableActionCreateArgs<ExtArgs>>): Prisma__AvailableActionClient<$Result.GetResult<Prisma.$AvailableActionPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Create many AvailableActions.
-     * @param {AvailableActionsCreateManyArgs} args - Arguments to create many AvailableActions.
+     * @param {AvailableActionCreateManyArgs} args - Arguments to create many AvailableActions.
      * @example
      * // Create many AvailableActions
-     * const availableActions = await prisma.availableActions.createMany({
+     * const availableAction = await prisma.availableAction.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends AvailableActionsCreateManyArgs>(args?: SelectSubset<T, AvailableActionsCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends AvailableActionCreateManyArgs>(args?: SelectSubset<T, AvailableActionCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create many AvailableActions and returns the data saved in the database.
-     * @param {AvailableActionsCreateManyAndReturnArgs} args - Arguments to create many AvailableActions.
+     * @param {AvailableActionCreateManyAndReturnArgs} args - Arguments to create many AvailableActions.
      * @example
      * // Create many AvailableActions
-     * const availableActions = await prisma.availableActions.createManyAndReturn({
+     * const availableAction = await prisma.availableAction.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
      * // Create many AvailableActions and only return the `id`
-     * const availableActionsWithIdOnly = await prisma.availableActions.createManyAndReturn({
+     * const availableActionWithIdOnly = await prisma.availableAction.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -6146,28 +6347,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends AvailableActionsCreateManyAndReturnArgs>(args?: SelectSubset<T, AvailableActionsCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AvailableActionsPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends AvailableActionCreateManyAndReturnArgs>(args?: SelectSubset<T, AvailableActionCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AvailableActionPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a AvailableActions.
-     * @param {AvailableActionsDeleteArgs} args - Arguments to delete one AvailableActions.
+     * Delete a AvailableAction.
+     * @param {AvailableActionDeleteArgs} args - Arguments to delete one AvailableAction.
      * @example
-     * // Delete one AvailableActions
-     * const AvailableActions = await prisma.availableActions.delete({
+     * // Delete one AvailableAction
+     * const AvailableAction = await prisma.availableAction.delete({
      *   where: {
-     *     // ... filter to delete one AvailableActions
+     *     // ... filter to delete one AvailableAction
      *   }
      * })
      * 
      */
-    delete<T extends AvailableActionsDeleteArgs>(args: SelectSubset<T, AvailableActionsDeleteArgs<ExtArgs>>): Prisma__AvailableActionsClient<$Result.GetResult<Prisma.$AvailableActionsPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends AvailableActionDeleteArgs>(args: SelectSubset<T, AvailableActionDeleteArgs<ExtArgs>>): Prisma__AvailableActionClient<$Result.GetResult<Prisma.$AvailableActionPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one AvailableActions.
-     * @param {AvailableActionsUpdateArgs} args - Arguments to update one AvailableActions.
+     * Update one AvailableAction.
+     * @param {AvailableActionUpdateArgs} args - Arguments to update one AvailableAction.
      * @example
-     * // Update one AvailableActions
-     * const availableActions = await prisma.availableActions.update({
+     * // Update one AvailableAction
+     * const availableAction = await prisma.availableAction.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -6177,30 +6378,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends AvailableActionsUpdateArgs>(args: SelectSubset<T, AvailableActionsUpdateArgs<ExtArgs>>): Prisma__AvailableActionsClient<$Result.GetResult<Prisma.$AvailableActionsPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends AvailableActionUpdateArgs>(args: SelectSubset<T, AvailableActionUpdateArgs<ExtArgs>>): Prisma__AvailableActionClient<$Result.GetResult<Prisma.$AvailableActionPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Delete zero or more AvailableActions.
-     * @param {AvailableActionsDeleteManyArgs} args - Arguments to filter AvailableActions to delete.
+     * @param {AvailableActionDeleteManyArgs} args - Arguments to filter AvailableActions to delete.
      * @example
      * // Delete a few AvailableActions
-     * const { count } = await prisma.availableActions.deleteMany({
+     * const { count } = await prisma.availableAction.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends AvailableActionsDeleteManyArgs>(args?: SelectSubset<T, AvailableActionsDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends AvailableActionDeleteManyArgs>(args?: SelectSubset<T, AvailableActionDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more AvailableActions.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AvailableActionsUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {AvailableActionUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many AvailableActions
-     * const availableActions = await prisma.availableActions.updateMany({
+     * const availableAction = await prisma.availableAction.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -6210,14 +6411,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends AvailableActionsUpdateManyArgs>(args: SelectSubset<T, AvailableActionsUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends AvailableActionUpdateManyArgs>(args: SelectSubset<T, AvailableActionUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more AvailableActions and returns the data updated in the database.
-     * @param {AvailableActionsUpdateManyAndReturnArgs} args - Arguments to update many AvailableActions.
+     * @param {AvailableActionUpdateManyAndReturnArgs} args - Arguments to update many AvailableActions.
      * @example
      * // Update many AvailableActions
-     * const availableActions = await prisma.availableActions.updateManyAndReturn({
+     * const availableAction = await prisma.availableAction.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -6227,7 +6428,7 @@ export namespace Prisma {
      * })
      * 
      * // Update zero or more AvailableActions and only return the `id`
-     * const availableActionsWithIdOnly = await prisma.availableActions.updateManyAndReturn({
+     * const availableActionWithIdOnly = await prisma.availableAction.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -6240,56 +6441,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends AvailableActionsUpdateManyAndReturnArgs>(args: SelectSubset<T, AvailableActionsUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AvailableActionsPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends AvailableActionUpdateManyAndReturnArgs>(args: SelectSubset<T, AvailableActionUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AvailableActionPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one AvailableActions.
-     * @param {AvailableActionsUpsertArgs} args - Arguments to update or create a AvailableActions.
+     * Create or update one AvailableAction.
+     * @param {AvailableActionUpsertArgs} args - Arguments to update or create a AvailableAction.
      * @example
-     * // Update or create a AvailableActions
-     * const availableActions = await prisma.availableActions.upsert({
+     * // Update or create a AvailableAction
+     * const availableAction = await prisma.availableAction.upsert({
      *   create: {
-     *     // ... data to create a AvailableActions
+     *     // ... data to create a AvailableAction
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the AvailableActions we want to update
+     *     // ... the filter for the AvailableAction we want to update
      *   }
      * })
      */
-    upsert<T extends AvailableActionsUpsertArgs>(args: SelectSubset<T, AvailableActionsUpsertArgs<ExtArgs>>): Prisma__AvailableActionsClient<$Result.GetResult<Prisma.$AvailableActionsPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends AvailableActionUpsertArgs>(args: SelectSubset<T, AvailableActionUpsertArgs<ExtArgs>>): Prisma__AvailableActionClient<$Result.GetResult<Prisma.$AvailableActionPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
      * Count the number of AvailableActions.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AvailableActionsCountArgs} args - Arguments to filter AvailableActions to count.
+     * @param {AvailableActionCountArgs} args - Arguments to filter AvailableActions to count.
      * @example
      * // Count the number of AvailableActions
-     * const count = await prisma.availableActions.count({
+     * const count = await prisma.availableAction.count({
      *   where: {
      *     // ... the filter for the AvailableActions we want to count
      *   }
      * })
     **/
-    count<T extends AvailableActionsCountArgs>(
-      args?: Subset<T, AvailableActionsCountArgs>,
+    count<T extends AvailableActionCountArgs>(
+      args?: Subset<T, AvailableActionCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], AvailableActionsCountAggregateOutputType>
+          : GetScalarType<T['select'], AvailableActionCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a AvailableActions.
+     * Allows you to perform aggregations operations on a AvailableAction.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AvailableActionsAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {AvailableActionAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -6309,13 +6510,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends AvailableActionsAggregateArgs>(args: Subset<T, AvailableActionsAggregateArgs>): Prisma.PrismaPromise<GetAvailableActionsAggregateType<T>>
+    aggregate<T extends AvailableActionAggregateArgs>(args: Subset<T, AvailableActionAggregateArgs>): Prisma.PrismaPromise<GetAvailableActionAggregateType<T>>
 
     /**
-     * Group by AvailableActions.
+     * Group by AvailableAction.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AvailableActionsGroupByArgs} args - Group by arguments.
+     * @param {AvailableActionGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -6330,14 +6531,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends AvailableActionsGroupByArgs,
+      T extends AvailableActionGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: AvailableActionsGroupByArgs['orderBy'] }
-        : { orderBy?: AvailableActionsGroupByArgs['orderBy'] },
+        ? { orderBy: AvailableActionGroupByArgs['orderBy'] }
+        : { orderBy?: AvailableActionGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -6386,22 +6587,22 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, AvailableActionsGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAvailableActionsGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, AvailableActionGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAvailableActionGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the AvailableActions model
+   * Fields of the AvailableAction model
    */
-  readonly fields: AvailableActionsFieldRefs;
+  readonly fields: AvailableActionFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for AvailableActions.
+   * The delegate class that acts as a "Promise-like" for AvailableAction.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__AvailableActionsClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__AvailableActionClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    trigger<T extends AvailableActions$triggerArgs<ExtArgs> = {}>(args?: Subset<T, AvailableActions$triggerArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ActionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    actions<T extends AvailableAction$actionsArgs<ExtArgs> = {}>(args?: Subset<T, AvailableAction$actionsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ActionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -6428,91 +6629,92 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the AvailableActions model
+   * Fields of the AvailableAction model
    */
-  interface AvailableActionsFieldRefs {
-    readonly id: FieldRef<"AvailableActions", 'String'>
-    readonly name: FieldRef<"AvailableActions", 'String'>
+  interface AvailableActionFieldRefs {
+    readonly id: FieldRef<"AvailableAction", 'String'>
+    readonly name: FieldRef<"AvailableAction", 'String'>
+    readonly image: FieldRef<"AvailableAction", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * AvailableActions findUnique
+   * AvailableAction findUnique
    */
-  export type AvailableActionsFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AvailableActions
+     * Select specific fields to fetch from the AvailableAction
      */
-    select?: AvailableActionsSelect<ExtArgs> | null
+    select?: AvailableActionSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AvailableActions
+     * Omit specific fields from the AvailableAction
      */
-    omit?: AvailableActionsOmit<ExtArgs> | null
+    omit?: AvailableActionOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AvailableActionsInclude<ExtArgs> | null
+    include?: AvailableActionInclude<ExtArgs> | null
     /**
-     * Filter, which AvailableActions to fetch.
+     * Filter, which AvailableAction to fetch.
      */
-    where: AvailableActionsWhereUniqueInput
+    where: AvailableActionWhereUniqueInput
   }
 
   /**
-   * AvailableActions findUniqueOrThrow
+   * AvailableAction findUniqueOrThrow
    */
-  export type AvailableActionsFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AvailableActions
+     * Select specific fields to fetch from the AvailableAction
      */
-    select?: AvailableActionsSelect<ExtArgs> | null
+    select?: AvailableActionSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AvailableActions
+     * Omit specific fields from the AvailableAction
      */
-    omit?: AvailableActionsOmit<ExtArgs> | null
+    omit?: AvailableActionOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AvailableActionsInclude<ExtArgs> | null
+    include?: AvailableActionInclude<ExtArgs> | null
     /**
-     * Filter, which AvailableActions to fetch.
+     * Filter, which AvailableAction to fetch.
      */
-    where: AvailableActionsWhereUniqueInput
+    where: AvailableActionWhereUniqueInput
   }
 
   /**
-   * AvailableActions findFirst
+   * AvailableAction findFirst
    */
-  export type AvailableActionsFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AvailableActions
+     * Select specific fields to fetch from the AvailableAction
      */
-    select?: AvailableActionsSelect<ExtArgs> | null
+    select?: AvailableActionSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AvailableActions
+     * Omit specific fields from the AvailableAction
      */
-    omit?: AvailableActionsOmit<ExtArgs> | null
+    omit?: AvailableActionOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AvailableActionsInclude<ExtArgs> | null
+    include?: AvailableActionInclude<ExtArgs> | null
     /**
-     * Filter, which AvailableActions to fetch.
+     * Filter, which AvailableAction to fetch.
      */
-    where?: AvailableActionsWhereInput
+    where?: AvailableActionWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
      * Determine the order of AvailableActions to fetch.
      */
-    orderBy?: AvailableActionsOrderByWithRelationInput | AvailableActionsOrderByWithRelationInput[]
+    orderBy?: AvailableActionOrderByWithRelationInput | AvailableActionOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the position for searching for AvailableActions.
      */
-    cursor?: AvailableActionsWhereUniqueInput
+    cursor?: AvailableActionWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
@@ -6530,41 +6732,41 @@ export namespace Prisma {
      * 
      * Filter by unique combinations of AvailableActions.
      */
-    distinct?: AvailableActionsScalarFieldEnum | AvailableActionsScalarFieldEnum[]
+    distinct?: AvailableActionScalarFieldEnum | AvailableActionScalarFieldEnum[]
   }
 
   /**
-   * AvailableActions findFirstOrThrow
+   * AvailableAction findFirstOrThrow
    */
-  export type AvailableActionsFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AvailableActions
+     * Select specific fields to fetch from the AvailableAction
      */
-    select?: AvailableActionsSelect<ExtArgs> | null
+    select?: AvailableActionSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AvailableActions
+     * Omit specific fields from the AvailableAction
      */
-    omit?: AvailableActionsOmit<ExtArgs> | null
+    omit?: AvailableActionOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AvailableActionsInclude<ExtArgs> | null
+    include?: AvailableActionInclude<ExtArgs> | null
     /**
-     * Filter, which AvailableActions to fetch.
+     * Filter, which AvailableAction to fetch.
      */
-    where?: AvailableActionsWhereInput
+    where?: AvailableActionWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
      * Determine the order of AvailableActions to fetch.
      */
-    orderBy?: AvailableActionsOrderByWithRelationInput | AvailableActionsOrderByWithRelationInput[]
+    orderBy?: AvailableActionOrderByWithRelationInput | AvailableActionOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the position for searching for AvailableActions.
      */
-    cursor?: AvailableActionsWhereUniqueInput
+    cursor?: AvailableActionWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
@@ -6582,41 +6784,41 @@ export namespace Prisma {
      * 
      * Filter by unique combinations of AvailableActions.
      */
-    distinct?: AvailableActionsScalarFieldEnum | AvailableActionsScalarFieldEnum[]
+    distinct?: AvailableActionScalarFieldEnum | AvailableActionScalarFieldEnum[]
   }
 
   /**
-   * AvailableActions findMany
+   * AvailableAction findMany
    */
-  export type AvailableActionsFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AvailableActions
+     * Select specific fields to fetch from the AvailableAction
      */
-    select?: AvailableActionsSelect<ExtArgs> | null
+    select?: AvailableActionSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AvailableActions
+     * Omit specific fields from the AvailableAction
      */
-    omit?: AvailableActionsOmit<ExtArgs> | null
+    omit?: AvailableActionOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AvailableActionsInclude<ExtArgs> | null
+    include?: AvailableActionInclude<ExtArgs> | null
     /**
      * Filter, which AvailableActions to fetch.
      */
-    where?: AvailableActionsWhereInput
+    where?: AvailableActionWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
      * Determine the order of AvailableActions to fetch.
      */
-    orderBy?: AvailableActionsOrderByWithRelationInput | AvailableActionsOrderByWithRelationInput[]
+    orderBy?: AvailableActionOrderByWithRelationInput | AvailableActionOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the position for listing AvailableActions.
      */
-    cursor?: AvailableActionsWhereUniqueInput
+    cursor?: AvailableActionWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
@@ -6629,99 +6831,99 @@ export namespace Prisma {
      * Skip the first `n` AvailableActions.
      */
     skip?: number
-    distinct?: AvailableActionsScalarFieldEnum | AvailableActionsScalarFieldEnum[]
+    distinct?: AvailableActionScalarFieldEnum | AvailableActionScalarFieldEnum[]
   }
 
   /**
-   * AvailableActions create
+   * AvailableAction create
    */
-  export type AvailableActionsCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AvailableActions
+     * Select specific fields to fetch from the AvailableAction
      */
-    select?: AvailableActionsSelect<ExtArgs> | null
+    select?: AvailableActionSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AvailableActions
+     * Omit specific fields from the AvailableAction
      */
-    omit?: AvailableActionsOmit<ExtArgs> | null
+    omit?: AvailableActionOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AvailableActionsInclude<ExtArgs> | null
+    include?: AvailableActionInclude<ExtArgs> | null
     /**
-     * The data needed to create a AvailableActions.
+     * The data needed to create a AvailableAction.
      */
-    data: XOR<AvailableActionsCreateInput, AvailableActionsUncheckedCreateInput>
+    data: XOR<AvailableActionCreateInput, AvailableActionUncheckedCreateInput>
   }
 
   /**
-   * AvailableActions createMany
+   * AvailableAction createMany
    */
-  export type AvailableActionsCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
      * The data used to create many AvailableActions.
      */
-    data: AvailableActionsCreateManyInput | AvailableActionsCreateManyInput[]
+    data: AvailableActionCreateManyInput | AvailableActionCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * AvailableActions createManyAndReturn
+   * AvailableAction createManyAndReturn
    */
-  export type AvailableActionsCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AvailableActions
+     * Select specific fields to fetch from the AvailableAction
      */
-    select?: AvailableActionsSelectCreateManyAndReturn<ExtArgs> | null
+    select?: AvailableActionSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the AvailableActions
+     * Omit specific fields from the AvailableAction
      */
-    omit?: AvailableActionsOmit<ExtArgs> | null
+    omit?: AvailableActionOmit<ExtArgs> | null
     /**
      * The data used to create many AvailableActions.
      */
-    data: AvailableActionsCreateManyInput | AvailableActionsCreateManyInput[]
+    data: AvailableActionCreateManyInput | AvailableActionCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * AvailableActions update
+   * AvailableAction update
    */
-  export type AvailableActionsUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AvailableActions
+     * Select specific fields to fetch from the AvailableAction
      */
-    select?: AvailableActionsSelect<ExtArgs> | null
+    select?: AvailableActionSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AvailableActions
+     * Omit specific fields from the AvailableAction
      */
-    omit?: AvailableActionsOmit<ExtArgs> | null
+    omit?: AvailableActionOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AvailableActionsInclude<ExtArgs> | null
+    include?: AvailableActionInclude<ExtArgs> | null
     /**
-     * The data needed to update a AvailableActions.
+     * The data needed to update a AvailableAction.
      */
-    data: XOR<AvailableActionsUpdateInput, AvailableActionsUncheckedUpdateInput>
+    data: XOR<AvailableActionUpdateInput, AvailableActionUncheckedUpdateInput>
     /**
-     * Choose, which AvailableActions to update.
+     * Choose, which AvailableAction to update.
      */
-    where: AvailableActionsWhereUniqueInput
+    where: AvailableActionWhereUniqueInput
   }
 
   /**
-   * AvailableActions updateMany
+   * AvailableAction updateMany
    */
-  export type AvailableActionsUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
      * The data used to update AvailableActions.
      */
-    data: XOR<AvailableActionsUpdateManyMutationInput, AvailableActionsUncheckedUpdateManyInput>
+    data: XOR<AvailableActionUpdateManyMutationInput, AvailableActionUncheckedUpdateManyInput>
     /**
      * Filter which AvailableActions to update
      */
-    where?: AvailableActionsWhereInput
+    where?: AvailableActionWhereInput
     /**
      * Limit how many AvailableActions to update.
      */
@@ -6729,25 +6931,25 @@ export namespace Prisma {
   }
 
   /**
-   * AvailableActions updateManyAndReturn
+   * AvailableAction updateManyAndReturn
    */
-  export type AvailableActionsUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AvailableActions
+     * Select specific fields to fetch from the AvailableAction
      */
-    select?: AvailableActionsSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: AvailableActionSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the AvailableActions
+     * Omit specific fields from the AvailableAction
      */
-    omit?: AvailableActionsOmit<ExtArgs> | null
+    omit?: AvailableActionOmit<ExtArgs> | null
     /**
      * The data used to update AvailableActions.
      */
-    data: XOR<AvailableActionsUpdateManyMutationInput, AvailableActionsUncheckedUpdateManyInput>
+    data: XOR<AvailableActionUpdateManyMutationInput, AvailableActionUncheckedUpdateManyInput>
     /**
      * Filter which AvailableActions to update
      */
-    where?: AvailableActionsWhereInput
+    where?: AvailableActionWhereInput
     /**
      * Limit how many AvailableActions to update.
      */
@@ -6755,65 +6957,65 @@ export namespace Prisma {
   }
 
   /**
-   * AvailableActions upsert
+   * AvailableAction upsert
    */
-  export type AvailableActionsUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AvailableActions
+     * Select specific fields to fetch from the AvailableAction
      */
-    select?: AvailableActionsSelect<ExtArgs> | null
+    select?: AvailableActionSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AvailableActions
+     * Omit specific fields from the AvailableAction
      */
-    omit?: AvailableActionsOmit<ExtArgs> | null
+    omit?: AvailableActionOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AvailableActionsInclude<ExtArgs> | null
+    include?: AvailableActionInclude<ExtArgs> | null
     /**
-     * The filter to search for the AvailableActions to update in case it exists.
+     * The filter to search for the AvailableAction to update in case it exists.
      */
-    where: AvailableActionsWhereUniqueInput
+    where: AvailableActionWhereUniqueInput
     /**
-     * In case the AvailableActions found by the `where` argument doesn't exist, create a new AvailableActions with this data.
+     * In case the AvailableAction found by the `where` argument doesn't exist, create a new AvailableAction with this data.
      */
-    create: XOR<AvailableActionsCreateInput, AvailableActionsUncheckedCreateInput>
+    create: XOR<AvailableActionCreateInput, AvailableActionUncheckedCreateInput>
     /**
-     * In case the AvailableActions was found with the provided `where` argument, update it with this data.
+     * In case the AvailableAction was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<AvailableActionsUpdateInput, AvailableActionsUncheckedUpdateInput>
+    update: XOR<AvailableActionUpdateInput, AvailableActionUncheckedUpdateInput>
   }
 
   /**
-   * AvailableActions delete
+   * AvailableAction delete
    */
-  export type AvailableActionsDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AvailableActions
+     * Select specific fields to fetch from the AvailableAction
      */
-    select?: AvailableActionsSelect<ExtArgs> | null
+    select?: AvailableActionSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AvailableActions
+     * Omit specific fields from the AvailableAction
      */
-    omit?: AvailableActionsOmit<ExtArgs> | null
+    omit?: AvailableActionOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AvailableActionsInclude<ExtArgs> | null
+    include?: AvailableActionInclude<ExtArgs> | null
     /**
-     * Filter which AvailableActions to delete.
+     * Filter which AvailableAction to delete.
      */
-    where: AvailableActionsWhereUniqueInput
+    where: AvailableActionWhereUniqueInput
   }
 
   /**
-   * AvailableActions deleteMany
+   * AvailableAction deleteMany
    */
-  export type AvailableActionsDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
      * Filter which AvailableActions to delete
      */
-    where?: AvailableActionsWhereInput
+    where?: AvailableActionWhereInput
     /**
      * Limit how many AvailableActions to delete.
      */
@@ -6821,9 +7023,9 @@ export namespace Prisma {
   }
 
   /**
-   * AvailableActions.trigger
+   * AvailableAction.actions
    */
-  export type AvailableActions$triggerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableAction$actionsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
      * Select specific fields to fetch from the Action
      */
@@ -6845,21 +7047,21 @@ export namespace Prisma {
   }
 
   /**
-   * AvailableActions without action
+   * AvailableAction without action
    */
-  export type AvailableActionsDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableActionDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the AvailableActions
+     * Select specific fields to fetch from the AvailableAction
      */
-    select?: AvailableActionsSelect<ExtArgs> | null
+    select?: AvailableActionSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the AvailableActions
+     * Omit specific fields from the AvailableAction
      */
-    omit?: AvailableActionsOmit<ExtArgs> | null
+    omit?: AvailableActionOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: AvailableActionsInclude<ExtArgs> | null
+    include?: AvailableActionInclude<ExtArgs> | null
   }
 
 
@@ -6876,16 +7078,19 @@ export namespace Prisma {
   export type AvailableTriggerMinAggregateOutputType = {
     id: string | null
     name: string | null
+    image: string | null
   }
 
   export type AvailableTriggerMaxAggregateOutputType = {
     id: string | null
     name: string | null
+    image: string | null
   }
 
   export type AvailableTriggerCountAggregateOutputType = {
     id: number
     name: number
+    image: number
     _all: number
   }
 
@@ -6893,16 +7098,19 @@ export namespace Prisma {
   export type AvailableTriggerMinAggregateInputType = {
     id?: true
     name?: true
+    image?: true
   }
 
   export type AvailableTriggerMaxAggregateInputType = {
     id?: true
     name?: true
+    image?: true
   }
 
   export type AvailableTriggerCountAggregateInputType = {
     id?: true
     name?: true
+    image?: true
     _all?: true
   }
 
@@ -6981,6 +7189,7 @@ export namespace Prisma {
   export type AvailableTriggerGroupByOutputType = {
     id: string
     name: string
+    image: string
     _count: AvailableTriggerCountAggregateOutputType | null
     _min: AvailableTriggerMinAggregateOutputType | null
     _max: AvailableTriggerMaxAggregateOutputType | null
@@ -7003,28 +7212,32 @@ export namespace Prisma {
   export type AvailableTriggerSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-    trigger?: boolean | AvailableTrigger$triggerArgs<ExtArgs>
+    image?: boolean
+    triggers?: boolean | AvailableTrigger$triggersArgs<ExtArgs>
     _count?: boolean | AvailableTriggerCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["availableTrigger"]>
 
   export type AvailableTriggerSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
+    image?: boolean
   }, ExtArgs["result"]["availableTrigger"]>
 
   export type AvailableTriggerSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
+    image?: boolean
   }, ExtArgs["result"]["availableTrigger"]>
 
   export type AvailableTriggerSelectScalar = {
     id?: boolean
     name?: boolean
+    image?: boolean
   }
 
-  export type AvailableTriggerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name", ExtArgs["result"]["availableTrigger"]>
+  export type AvailableTriggerOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "image", ExtArgs["result"]["availableTrigger"]>
   export type AvailableTriggerInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    trigger?: boolean | AvailableTrigger$triggerArgs<ExtArgs>
+    triggers?: boolean | AvailableTrigger$triggersArgs<ExtArgs>
     _count?: boolean | AvailableTriggerCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type AvailableTriggerIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -7033,11 +7246,12 @@ export namespace Prisma {
   export type $AvailableTriggerPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "AvailableTrigger"
     objects: {
-      trigger: Prisma.$TriggerPayload<ExtArgs>[]
+      triggers: Prisma.$TriggerPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: string
       name: string
+      image: string
     }, ExtArgs["result"]["availableTrigger"]>
     composites: {}
   }
@@ -7432,7 +7646,7 @@ export namespace Prisma {
    */
   export interface Prisma__AvailableTriggerClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    trigger<T extends AvailableTrigger$triggerArgs<ExtArgs> = {}>(args?: Subset<T, AvailableTrigger$triggerArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TriggerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    triggers<T extends AvailableTrigger$triggersArgs<ExtArgs> = {}>(args?: Subset<T, AvailableTrigger$triggersArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TriggerPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -7464,6 +7678,7 @@ export namespace Prisma {
   interface AvailableTriggerFieldRefs {
     readonly id: FieldRef<"AvailableTrigger", 'String'>
     readonly name: FieldRef<"AvailableTrigger", 'String'>
+    readonly image: FieldRef<"AvailableTrigger", 'String'>
   }
     
 
@@ -7852,9 +8067,9 @@ export namespace Prisma {
   }
 
   /**
-   * AvailableTrigger.trigger
+   * AvailableTrigger.triggers
    */
-  export type AvailableTrigger$triggerArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AvailableTrigger$triggersArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
      * Select specific fields to fetch from the Trigger
      */
@@ -9990,7 +10205,8 @@ export namespace Prisma {
 
   export const ZapScalarFieldEnum: {
     id: 'id',
-    triggerId: 'triggerId'
+    triggerId: 'triggerId',
+    userId: 'userId'
   };
 
   export type ZapScalarFieldEnum = (typeof ZapScalarFieldEnum)[keyof typeof ZapScalarFieldEnum]
@@ -9999,7 +10215,8 @@ export namespace Prisma {
   export const TriggerScalarFieldEnum: {
     id: 'id',
     zapId: 'zapId',
-    triggerId: 'triggerId'
+    triggerId: 'triggerId',
+    metadata: 'metadata'
   };
 
   export type TriggerScalarFieldEnum = (typeof TriggerScalarFieldEnum)[keyof typeof TriggerScalarFieldEnum]
@@ -10009,23 +10226,26 @@ export namespace Prisma {
     id: 'id',
     zapId: 'zapId',
     actionId: 'actionId',
+    metadata: 'metadata',
     sortingOrder: 'sortingOrder'
   };
 
   export type ActionScalarFieldEnum = (typeof ActionScalarFieldEnum)[keyof typeof ActionScalarFieldEnum]
 
 
-  export const AvailableActionsScalarFieldEnum: {
+  export const AvailableActionScalarFieldEnum: {
     id: 'id',
-    name: 'name'
+    name: 'name',
+    image: 'image'
   };
 
-  export type AvailableActionsScalarFieldEnum = (typeof AvailableActionsScalarFieldEnum)[keyof typeof AvailableActionsScalarFieldEnum]
+  export type AvailableActionScalarFieldEnum = (typeof AvailableActionScalarFieldEnum)[keyof typeof AvailableActionScalarFieldEnum]
 
 
   export const AvailableTriggerScalarFieldEnum: {
     id: 'id',
-    name: 'name'
+    name: 'name',
+    image: 'image'
   };
 
   export type AvailableTriggerScalarFieldEnum = (typeof AvailableTriggerScalarFieldEnum)[keyof typeof AvailableTriggerScalarFieldEnum]
@@ -10152,6 +10372,7 @@ export namespace Prisma {
     name?: StringFilter<"User"> | string
     email?: StringFilter<"User"> | string
     password?: StringFilter<"User"> | string
+    zaps?: ZapListRelationFilter
   }
 
   export type UserOrderByWithRelationInput = {
@@ -10159,6 +10380,7 @@ export namespace Prisma {
     name?: SortOrder
     email?: SortOrder
     password?: SortOrder
+    zaps?: ZapOrderByRelationAggregateInput
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -10169,6 +10391,7 @@ export namespace Prisma {
     name?: StringFilter<"User"> | string
     email?: StringFilter<"User"> | string
     password?: StringFilter<"User"> | string
+    zaps?: ZapListRelationFilter
   }, "id">
 
   export type UserOrderByWithAggregationInput = {
@@ -10199,17 +10422,21 @@ export namespace Prisma {
     NOT?: ZapWhereInput | ZapWhereInput[]
     id?: StringFilter<"Zap"> | string
     triggerId?: StringFilter<"Zap"> | string
+    userId?: IntFilter<"Zap"> | number
     trigger?: XOR<TriggerNullableScalarRelationFilter, TriggerWhereInput> | null
     actions?: ActionListRelationFilter
     zapRuns?: ZapRunListRelationFilter
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
   }
 
   export type ZapOrderByWithRelationInput = {
     id?: SortOrder
     triggerId?: SortOrder
+    userId?: SortOrder
     trigger?: TriggerOrderByWithRelationInput
     actions?: ActionOrderByRelationAggregateInput
     zapRuns?: ZapRunOrderByRelationAggregateInput
+    user?: UserOrderByWithRelationInput
   }
 
   export type ZapWhereUniqueInput = Prisma.AtLeast<{
@@ -10218,17 +10445,22 @@ export namespace Prisma {
     OR?: ZapWhereInput[]
     NOT?: ZapWhereInput | ZapWhereInput[]
     triggerId?: StringFilter<"Zap"> | string
+    userId?: IntFilter<"Zap"> | number
     trigger?: XOR<TriggerNullableScalarRelationFilter, TriggerWhereInput> | null
     actions?: ActionListRelationFilter
     zapRuns?: ZapRunListRelationFilter
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
   }, "id">
 
   export type ZapOrderByWithAggregationInput = {
     id?: SortOrder
     triggerId?: SortOrder
+    userId?: SortOrder
     _count?: ZapCountOrderByAggregateInput
+    _avg?: ZapAvgOrderByAggregateInput
     _max?: ZapMaxOrderByAggregateInput
     _min?: ZapMinOrderByAggregateInput
+    _sum?: ZapSumOrderByAggregateInput
   }
 
   export type ZapScalarWhereWithAggregatesInput = {
@@ -10237,6 +10469,7 @@ export namespace Prisma {
     NOT?: ZapScalarWhereWithAggregatesInput | ZapScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"Zap"> | string
     triggerId?: StringWithAggregatesFilter<"Zap"> | string
+    userId?: IntWithAggregatesFilter<"Zap"> | number
   }
 
   export type TriggerWhereInput = {
@@ -10246,6 +10479,7 @@ export namespace Prisma {
     id?: StringFilter<"Trigger"> | string
     zapId?: StringFilter<"Trigger"> | string
     triggerId?: StringFilter<"Trigger"> | string
+    metadata?: JsonFilter<"Trigger">
     type?: XOR<AvailableTriggerScalarRelationFilter, AvailableTriggerWhereInput>
     zap?: XOR<ZapScalarRelationFilter, ZapWhereInput>
   }
@@ -10254,6 +10488,7 @@ export namespace Prisma {
     id?: SortOrder
     zapId?: SortOrder
     triggerId?: SortOrder
+    metadata?: SortOrder
     type?: AvailableTriggerOrderByWithRelationInput
     zap?: ZapOrderByWithRelationInput
   }
@@ -10265,6 +10500,7 @@ export namespace Prisma {
     OR?: TriggerWhereInput[]
     NOT?: TriggerWhereInput | TriggerWhereInput[]
     triggerId?: StringFilter<"Trigger"> | string
+    metadata?: JsonFilter<"Trigger">
     type?: XOR<AvailableTriggerScalarRelationFilter, AvailableTriggerWhereInput>
     zap?: XOR<ZapScalarRelationFilter, ZapWhereInput>
   }, "id" | "zapId">
@@ -10273,6 +10509,7 @@ export namespace Prisma {
     id?: SortOrder
     zapId?: SortOrder
     triggerId?: SortOrder
+    metadata?: SortOrder
     _count?: TriggerCountOrderByAggregateInput
     _max?: TriggerMaxOrderByAggregateInput
     _min?: TriggerMinOrderByAggregateInput
@@ -10285,6 +10522,7 @@ export namespace Prisma {
     id?: StringWithAggregatesFilter<"Trigger"> | string
     zapId?: StringWithAggregatesFilter<"Trigger"> | string
     triggerId?: StringWithAggregatesFilter<"Trigger"> | string
+    metadata?: JsonWithAggregatesFilter<"Trigger">
   }
 
   export type ActionWhereInput = {
@@ -10294,18 +10532,20 @@ export namespace Prisma {
     id?: StringFilter<"Action"> | string
     zapId?: StringFilter<"Action"> | string
     actionId?: StringFilter<"Action"> | string
+    metadata?: JsonFilter<"Action">
     sortingOrder?: IntFilter<"Action"> | number
     zap?: XOR<ZapScalarRelationFilter, ZapWhereInput>
-    type?: XOR<AvailableActionsScalarRelationFilter, AvailableActionsWhereInput>
+    type?: XOR<AvailableActionScalarRelationFilter, AvailableActionWhereInput>
   }
 
   export type ActionOrderByWithRelationInput = {
     id?: SortOrder
     zapId?: SortOrder
     actionId?: SortOrder
+    metadata?: SortOrder
     sortingOrder?: SortOrder
     zap?: ZapOrderByWithRelationInput
-    type?: AvailableActionsOrderByWithRelationInput
+    type?: AvailableActionOrderByWithRelationInput
   }
 
   export type ActionWhereUniqueInput = Prisma.AtLeast<{
@@ -10315,15 +10555,17 @@ export namespace Prisma {
     NOT?: ActionWhereInput | ActionWhereInput[]
     zapId?: StringFilter<"Action"> | string
     actionId?: StringFilter<"Action"> | string
+    metadata?: JsonFilter<"Action">
     sortingOrder?: IntFilter<"Action"> | number
     zap?: XOR<ZapScalarRelationFilter, ZapWhereInput>
-    type?: XOR<AvailableActionsScalarRelationFilter, AvailableActionsWhereInput>
+    type?: XOR<AvailableActionScalarRelationFilter, AvailableActionWhereInput>
   }, "id">
 
   export type ActionOrderByWithAggregationInput = {
     id?: SortOrder
     zapId?: SortOrder
     actionId?: SortOrder
+    metadata?: SortOrder
     sortingOrder?: SortOrder
     _count?: ActionCountOrderByAggregateInput
     _avg?: ActionAvgOrderByAggregateInput
@@ -10339,47 +10581,53 @@ export namespace Prisma {
     id?: StringWithAggregatesFilter<"Action"> | string
     zapId?: StringWithAggregatesFilter<"Action"> | string
     actionId?: StringWithAggregatesFilter<"Action"> | string
+    metadata?: JsonWithAggregatesFilter<"Action">
     sortingOrder?: IntWithAggregatesFilter<"Action"> | number
   }
 
-  export type AvailableActionsWhereInput = {
-    AND?: AvailableActionsWhereInput | AvailableActionsWhereInput[]
-    OR?: AvailableActionsWhereInput[]
-    NOT?: AvailableActionsWhereInput | AvailableActionsWhereInput[]
-    id?: StringFilter<"AvailableActions"> | string
-    name?: StringFilter<"AvailableActions"> | string
-    trigger?: ActionListRelationFilter
+  export type AvailableActionWhereInput = {
+    AND?: AvailableActionWhereInput | AvailableActionWhereInput[]
+    OR?: AvailableActionWhereInput[]
+    NOT?: AvailableActionWhereInput | AvailableActionWhereInput[]
+    id?: StringFilter<"AvailableAction"> | string
+    name?: StringFilter<"AvailableAction"> | string
+    image?: StringFilter<"AvailableAction"> | string
+    actions?: ActionListRelationFilter
   }
 
-  export type AvailableActionsOrderByWithRelationInput = {
+  export type AvailableActionOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
-    trigger?: ActionOrderByRelationAggregateInput
+    image?: SortOrder
+    actions?: ActionOrderByRelationAggregateInput
   }
 
-  export type AvailableActionsWhereUniqueInput = Prisma.AtLeast<{
+  export type AvailableActionWhereUniqueInput = Prisma.AtLeast<{
     id?: string
-    AND?: AvailableActionsWhereInput | AvailableActionsWhereInput[]
-    OR?: AvailableActionsWhereInput[]
-    NOT?: AvailableActionsWhereInput | AvailableActionsWhereInput[]
-    name?: StringFilter<"AvailableActions"> | string
-    trigger?: ActionListRelationFilter
+    AND?: AvailableActionWhereInput | AvailableActionWhereInput[]
+    OR?: AvailableActionWhereInput[]
+    NOT?: AvailableActionWhereInput | AvailableActionWhereInput[]
+    name?: StringFilter<"AvailableAction"> | string
+    image?: StringFilter<"AvailableAction"> | string
+    actions?: ActionListRelationFilter
   }, "id">
 
-  export type AvailableActionsOrderByWithAggregationInput = {
+  export type AvailableActionOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
-    _count?: AvailableActionsCountOrderByAggregateInput
-    _max?: AvailableActionsMaxOrderByAggregateInput
-    _min?: AvailableActionsMinOrderByAggregateInput
+    image?: SortOrder
+    _count?: AvailableActionCountOrderByAggregateInput
+    _max?: AvailableActionMaxOrderByAggregateInput
+    _min?: AvailableActionMinOrderByAggregateInput
   }
 
-  export type AvailableActionsScalarWhereWithAggregatesInput = {
-    AND?: AvailableActionsScalarWhereWithAggregatesInput | AvailableActionsScalarWhereWithAggregatesInput[]
-    OR?: AvailableActionsScalarWhereWithAggregatesInput[]
-    NOT?: AvailableActionsScalarWhereWithAggregatesInput | AvailableActionsScalarWhereWithAggregatesInput[]
-    id?: StringWithAggregatesFilter<"AvailableActions"> | string
-    name?: StringWithAggregatesFilter<"AvailableActions"> | string
+  export type AvailableActionScalarWhereWithAggregatesInput = {
+    AND?: AvailableActionScalarWhereWithAggregatesInput | AvailableActionScalarWhereWithAggregatesInput[]
+    OR?: AvailableActionScalarWhereWithAggregatesInput[]
+    NOT?: AvailableActionScalarWhereWithAggregatesInput | AvailableActionScalarWhereWithAggregatesInput[]
+    id?: StringWithAggregatesFilter<"AvailableAction"> | string
+    name?: StringWithAggregatesFilter<"AvailableAction"> | string
+    image?: StringWithAggregatesFilter<"AvailableAction"> | string
   }
 
   export type AvailableTriggerWhereInput = {
@@ -10388,13 +10636,15 @@ export namespace Prisma {
     NOT?: AvailableTriggerWhereInput | AvailableTriggerWhereInput[]
     id?: StringFilter<"AvailableTrigger"> | string
     name?: StringFilter<"AvailableTrigger"> | string
-    trigger?: TriggerListRelationFilter
+    image?: StringFilter<"AvailableTrigger"> | string
+    triggers?: TriggerListRelationFilter
   }
 
   export type AvailableTriggerOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
-    trigger?: TriggerOrderByRelationAggregateInput
+    image?: SortOrder
+    triggers?: TriggerOrderByRelationAggregateInput
   }
 
   export type AvailableTriggerWhereUniqueInput = Prisma.AtLeast<{
@@ -10403,12 +10653,14 @@ export namespace Prisma {
     OR?: AvailableTriggerWhereInput[]
     NOT?: AvailableTriggerWhereInput | AvailableTriggerWhereInput[]
     name?: StringFilter<"AvailableTrigger"> | string
-    trigger?: TriggerListRelationFilter
+    image?: StringFilter<"AvailableTrigger"> | string
+    triggers?: TriggerListRelationFilter
   }, "id">
 
   export type AvailableTriggerOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
+    image?: SortOrder
     _count?: AvailableTriggerCountOrderByAggregateInput
     _max?: AvailableTriggerMaxOrderByAggregateInput
     _min?: AvailableTriggerMinOrderByAggregateInput
@@ -10420,6 +10672,7 @@ export namespace Prisma {
     NOT?: AvailableTriggerScalarWhereWithAggregatesInput | AvailableTriggerScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"AvailableTrigger"> | string
     name?: StringWithAggregatesFilter<"AvailableTrigger"> | string
+    image?: StringWithAggregatesFilter<"AvailableTrigger"> | string
   }
 
   export type ZapRunWhereInput = {
@@ -10514,6 +10767,7 @@ export namespace Prisma {
     name: string
     email: string
     password: string
+    zaps?: ZapCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateInput = {
@@ -10521,12 +10775,14 @@ export namespace Prisma {
     name: string
     email: string
     password: string
+    zaps?: ZapUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
+    zaps?: ZapUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateInput = {
@@ -10534,6 +10790,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
+    zaps?: ZapUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateManyInput = {
@@ -10562,11 +10819,13 @@ export namespace Prisma {
     trigger?: TriggerCreateNestedOneWithoutZapInput
     actions?: ActionCreateNestedManyWithoutZapInput
     zapRuns?: ZapRunCreateNestedManyWithoutZapInput
+    user: UserCreateNestedOneWithoutZapsInput
   }
 
   export type ZapUncheckedCreateInput = {
     id?: string
     triggerId: string
+    userId: number
     trigger?: TriggerUncheckedCreateNestedOneWithoutZapInput
     actions?: ActionUncheckedCreateNestedManyWithoutZapInput
     zapRuns?: ZapRunUncheckedCreateNestedManyWithoutZapInput
@@ -10578,11 +10837,13 @@ export namespace Prisma {
     trigger?: TriggerUpdateOneWithoutZapNestedInput
     actions?: ActionUpdateManyWithoutZapNestedInput
     zapRuns?: ZapRunUpdateManyWithoutZapNestedInput
+    user?: UserUpdateOneRequiredWithoutZapsNestedInput
   }
 
   export type ZapUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     triggerId?: StringFieldUpdateOperationsInput | string
+    userId?: IntFieldUpdateOperationsInput | number
     trigger?: TriggerUncheckedUpdateOneWithoutZapNestedInput
     actions?: ActionUncheckedUpdateManyWithoutZapNestedInput
     zapRuns?: ZapRunUncheckedUpdateManyWithoutZapNestedInput
@@ -10591,6 +10852,7 @@ export namespace Prisma {
   export type ZapCreateManyInput = {
     id?: string
     triggerId: string
+    userId: number
   }
 
   export type ZapUpdateManyMutationInput = {
@@ -10601,11 +10863,13 @@ export namespace Prisma {
   export type ZapUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     triggerId?: StringFieldUpdateOperationsInput | string
+    userId?: IntFieldUpdateOperationsInput | number
   }
 
   export type TriggerCreateInput = {
     id?: string
-    type: AvailableTriggerCreateNestedOneWithoutTriggerInput
+    metadata?: JsonNullValueInput | InputJsonValue
+    type: AvailableTriggerCreateNestedOneWithoutTriggersInput
     zap: ZapCreateNestedOneWithoutTriggerInput
   }
 
@@ -10613,11 +10877,13 @@ export namespace Prisma {
     id?: string
     zapId: string
     triggerId: string
+    metadata?: JsonNullValueInput | InputJsonValue
   }
 
   export type TriggerUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
-    type?: AvailableTriggerUpdateOneRequiredWithoutTriggerNestedInput
+    metadata?: JsonNullValueInput | InputJsonValue
+    type?: AvailableTriggerUpdateOneRequiredWithoutTriggersNestedInput
     zap?: ZapUpdateOneRequiredWithoutTriggerNestedInput
   }
 
@@ -10625,49 +10891,57 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     zapId?: StringFieldUpdateOperationsInput | string
     triggerId?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
   }
 
   export type TriggerCreateManyInput = {
     id?: string
     zapId: string
     triggerId: string
+    metadata?: JsonNullValueInput | InputJsonValue
   }
 
   export type TriggerUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
   }
 
   export type TriggerUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     zapId?: StringFieldUpdateOperationsInput | string
     triggerId?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
   }
 
   export type ActionCreateInput = {
     id?: string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: number
     zap: ZapCreateNestedOneWithoutActionsInput
-    type: AvailableActionsCreateNestedOneWithoutTriggerInput
+    type: AvailableActionCreateNestedOneWithoutActionsInput
   }
 
   export type ActionUncheckedCreateInput = {
     id?: string
     zapId: string
     actionId: string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: number
   }
 
   export type ActionUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: IntFieldUpdateOperationsInput | number
     zap?: ZapUpdateOneRequiredWithoutActionsNestedInput
-    type?: AvailableActionsUpdateOneRequiredWithoutTriggerNestedInput
+    type?: AvailableActionUpdateOneRequiredWithoutActionsNestedInput
   }
 
   export type ActionUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     zapId?: StringFieldUpdateOperationsInput | string
     actionId?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: IntFieldUpdateOperationsInput | number
   }
 
@@ -10675,11 +10949,13 @@ export namespace Prisma {
     id?: string
     zapId: string
     actionId: string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: number
   }
 
   export type ActionUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: IntFieldUpdateOperationsInput | number
   }
 
@@ -10687,85 +10963,100 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     zapId?: StringFieldUpdateOperationsInput | string
     actionId?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: IntFieldUpdateOperationsInput | number
   }
 
-  export type AvailableActionsCreateInput = {
+  export type AvailableActionCreateInput = {
     id?: string
     name: string
-    trigger?: ActionCreateNestedManyWithoutTypeInput
+    image: string
+    actions?: ActionCreateNestedManyWithoutTypeInput
   }
 
-  export type AvailableActionsUncheckedCreateInput = {
+  export type AvailableActionUncheckedCreateInput = {
     id?: string
     name: string
-    trigger?: ActionUncheckedCreateNestedManyWithoutTypeInput
+    image: string
+    actions?: ActionUncheckedCreateNestedManyWithoutTypeInput
   }
 
-  export type AvailableActionsUpdateInput = {
+  export type AvailableActionUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    trigger?: ActionUpdateManyWithoutTypeNestedInput
+    image?: StringFieldUpdateOperationsInput | string
+    actions?: ActionUpdateManyWithoutTypeNestedInput
   }
 
-  export type AvailableActionsUncheckedUpdateInput = {
+  export type AvailableActionUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    trigger?: ActionUncheckedUpdateManyWithoutTypeNestedInput
+    image?: StringFieldUpdateOperationsInput | string
+    actions?: ActionUncheckedUpdateManyWithoutTypeNestedInput
   }
 
-  export type AvailableActionsCreateManyInput = {
+  export type AvailableActionCreateManyInput = {
     id?: string
     name: string
+    image: string
   }
 
-  export type AvailableActionsUpdateManyMutationInput = {
+  export type AvailableActionUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
-  export type AvailableActionsUncheckedUpdateManyInput = {
+  export type AvailableActionUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
   export type AvailableTriggerCreateInput = {
     id?: string
     name: string
-    trigger?: TriggerCreateNestedManyWithoutTypeInput
+    image: string
+    triggers?: TriggerCreateNestedManyWithoutTypeInput
   }
 
   export type AvailableTriggerUncheckedCreateInput = {
     id?: string
     name: string
-    trigger?: TriggerUncheckedCreateNestedManyWithoutTypeInput
+    image: string
+    triggers?: TriggerUncheckedCreateNestedManyWithoutTypeInput
   }
 
   export type AvailableTriggerUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    trigger?: TriggerUpdateManyWithoutTypeNestedInput
+    image?: StringFieldUpdateOperationsInput | string
+    triggers?: TriggerUpdateManyWithoutTypeNestedInput
   }
 
   export type AvailableTriggerUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
-    trigger?: TriggerUncheckedUpdateManyWithoutTypeNestedInput
+    image?: StringFieldUpdateOperationsInput | string
+    triggers?: TriggerUncheckedUpdateManyWithoutTypeNestedInput
   }
 
   export type AvailableTriggerCreateManyInput = {
     id?: string
     name: string
+    image: string
   }
 
   export type AvailableTriggerUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
   export type AvailableTriggerUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
   export type ZapRunCreateInput = {
@@ -10873,6 +11164,16 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
+  export type ZapListRelationFilter = {
+    every?: ZapWhereInput
+    some?: ZapWhereInput
+    none?: ZapWhereInput
+  }
+
+  export type ZapOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
   export type UserCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
@@ -10953,6 +11254,11 @@ export namespace Prisma {
     none?: ZapRunWhereInput
   }
 
+  export type UserScalarRelationFilter = {
+    is?: UserWhereInput
+    isNot?: UserWhereInput
+  }
+
   export type ActionOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
@@ -10964,118 +11270,27 @@ export namespace Prisma {
   export type ZapCountOrderByAggregateInput = {
     id?: SortOrder
     triggerId?: SortOrder
+    userId?: SortOrder
+  }
+
+  export type ZapAvgOrderByAggregateInput = {
+    userId?: SortOrder
   }
 
   export type ZapMaxOrderByAggregateInput = {
     id?: SortOrder
     triggerId?: SortOrder
+    userId?: SortOrder
   }
 
   export type ZapMinOrderByAggregateInput = {
     id?: SortOrder
     triggerId?: SortOrder
+    userId?: SortOrder
   }
 
-  export type AvailableTriggerScalarRelationFilter = {
-    is?: AvailableTriggerWhereInput
-    isNot?: AvailableTriggerWhereInput
-  }
-
-  export type ZapScalarRelationFilter = {
-    is?: ZapWhereInput
-    isNot?: ZapWhereInput
-  }
-
-  export type TriggerCountOrderByAggregateInput = {
-    id?: SortOrder
-    zapId?: SortOrder
-    triggerId?: SortOrder
-  }
-
-  export type TriggerMaxOrderByAggregateInput = {
-    id?: SortOrder
-    zapId?: SortOrder
-    triggerId?: SortOrder
-  }
-
-  export type TriggerMinOrderByAggregateInput = {
-    id?: SortOrder
-    zapId?: SortOrder
-    triggerId?: SortOrder
-  }
-
-  export type AvailableActionsScalarRelationFilter = {
-    is?: AvailableActionsWhereInput
-    isNot?: AvailableActionsWhereInput
-  }
-
-  export type ActionCountOrderByAggregateInput = {
-    id?: SortOrder
-    zapId?: SortOrder
-    actionId?: SortOrder
-    sortingOrder?: SortOrder
-  }
-
-  export type ActionAvgOrderByAggregateInput = {
-    sortingOrder?: SortOrder
-  }
-
-  export type ActionMaxOrderByAggregateInput = {
-    id?: SortOrder
-    zapId?: SortOrder
-    actionId?: SortOrder
-    sortingOrder?: SortOrder
-  }
-
-  export type ActionMinOrderByAggregateInput = {
-    id?: SortOrder
-    zapId?: SortOrder
-    actionId?: SortOrder
-    sortingOrder?: SortOrder
-  }
-
-  export type ActionSumOrderByAggregateInput = {
-    sortingOrder?: SortOrder
-  }
-
-  export type AvailableActionsCountOrderByAggregateInput = {
-    id?: SortOrder
-    name?: SortOrder
-  }
-
-  export type AvailableActionsMaxOrderByAggregateInput = {
-    id?: SortOrder
-    name?: SortOrder
-  }
-
-  export type AvailableActionsMinOrderByAggregateInput = {
-    id?: SortOrder
-    name?: SortOrder
-  }
-
-  export type TriggerListRelationFilter = {
-    every?: TriggerWhereInput
-    some?: TriggerWhereInput
-    none?: TriggerWhereInput
-  }
-
-  export type TriggerOrderByRelationAggregateInput = {
-    _count?: SortOrder
-  }
-
-  export type AvailableTriggerCountOrderByAggregateInput = {
-    id?: SortOrder
-    name?: SortOrder
-  }
-
-  export type AvailableTriggerMaxOrderByAggregateInput = {
-    id?: SortOrder
-    name?: SortOrder
-  }
-
-  export type AvailableTriggerMinOrderByAggregateInput = {
-    id?: SortOrder
-    name?: SortOrder
+  export type ZapSumOrderByAggregateInput = {
+    userId?: SortOrder
   }
   export type JsonFilter<$PrismaModel = never> =
     | PatchUndefined<
@@ -11101,25 +11316,33 @@ export namespace Prisma {
     not?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
   }
 
-  export type ZapRunOutboxNullableScalarRelationFilter = {
-    is?: ZapRunOutboxWhereInput | null
-    isNot?: ZapRunOutboxWhereInput | null
+  export type AvailableTriggerScalarRelationFilter = {
+    is?: AvailableTriggerWhereInput
+    isNot?: AvailableTriggerWhereInput
   }
 
-  export type ZapRunCountOrderByAggregateInput = {
+  export type ZapScalarRelationFilter = {
+    is?: ZapWhereInput
+    isNot?: ZapWhereInput
+  }
+
+  export type TriggerCountOrderByAggregateInput = {
     id?: SortOrder
     zapId?: SortOrder
+    triggerId?: SortOrder
     metadata?: SortOrder
   }
 
-  export type ZapRunMaxOrderByAggregateInput = {
+  export type TriggerMaxOrderByAggregateInput = {
     id?: SortOrder
     zapId?: SortOrder
+    triggerId?: SortOrder
   }
 
-  export type ZapRunMinOrderByAggregateInput = {
+  export type TriggerMinOrderByAggregateInput = {
     id?: SortOrder
     zapId?: SortOrder
+    triggerId?: SortOrder
   }
   export type JsonWithAggregatesFilter<$PrismaModel = never> =
     | PatchUndefined<
@@ -11148,6 +11371,108 @@ export namespace Prisma {
     _max?: NestedJsonFilter<$PrismaModel>
   }
 
+  export type AvailableActionScalarRelationFilter = {
+    is?: AvailableActionWhereInput
+    isNot?: AvailableActionWhereInput
+  }
+
+  export type ActionCountOrderByAggregateInput = {
+    id?: SortOrder
+    zapId?: SortOrder
+    actionId?: SortOrder
+    metadata?: SortOrder
+    sortingOrder?: SortOrder
+  }
+
+  export type ActionAvgOrderByAggregateInput = {
+    sortingOrder?: SortOrder
+  }
+
+  export type ActionMaxOrderByAggregateInput = {
+    id?: SortOrder
+    zapId?: SortOrder
+    actionId?: SortOrder
+    sortingOrder?: SortOrder
+  }
+
+  export type ActionMinOrderByAggregateInput = {
+    id?: SortOrder
+    zapId?: SortOrder
+    actionId?: SortOrder
+    sortingOrder?: SortOrder
+  }
+
+  export type ActionSumOrderByAggregateInput = {
+    sortingOrder?: SortOrder
+  }
+
+  export type AvailableActionCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    image?: SortOrder
+  }
+
+  export type AvailableActionMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    image?: SortOrder
+  }
+
+  export type AvailableActionMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    image?: SortOrder
+  }
+
+  export type TriggerListRelationFilter = {
+    every?: TriggerWhereInput
+    some?: TriggerWhereInput
+    none?: TriggerWhereInput
+  }
+
+  export type TriggerOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type AvailableTriggerCountOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    image?: SortOrder
+  }
+
+  export type AvailableTriggerMaxOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    image?: SortOrder
+  }
+
+  export type AvailableTriggerMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    image?: SortOrder
+  }
+
+  export type ZapRunOutboxNullableScalarRelationFilter = {
+    is?: ZapRunOutboxWhereInput | null
+    isNot?: ZapRunOutboxWhereInput | null
+  }
+
+  export type ZapRunCountOrderByAggregateInput = {
+    id?: SortOrder
+    zapId?: SortOrder
+    metadata?: SortOrder
+  }
+
+  export type ZapRunMaxOrderByAggregateInput = {
+    id?: SortOrder
+    zapId?: SortOrder
+  }
+
+  export type ZapRunMinOrderByAggregateInput = {
+    id?: SortOrder
+    zapId?: SortOrder
+  }
+
   export type ZapRunScalarRelationFilter = {
     is?: ZapRunWhereInput
     isNot?: ZapRunWhereInput
@@ -11168,8 +11493,36 @@ export namespace Prisma {
     zapRunId?: SortOrder
   }
 
+  export type ZapCreateNestedManyWithoutUserInput = {
+    create?: XOR<ZapCreateWithoutUserInput, ZapUncheckedCreateWithoutUserInput> | ZapCreateWithoutUserInput[] | ZapUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ZapCreateOrConnectWithoutUserInput | ZapCreateOrConnectWithoutUserInput[]
+    createMany?: ZapCreateManyUserInputEnvelope
+    connect?: ZapWhereUniqueInput | ZapWhereUniqueInput[]
+  }
+
+  export type ZapUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<ZapCreateWithoutUserInput, ZapUncheckedCreateWithoutUserInput> | ZapCreateWithoutUserInput[] | ZapUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ZapCreateOrConnectWithoutUserInput | ZapCreateOrConnectWithoutUserInput[]
+    createMany?: ZapCreateManyUserInputEnvelope
+    connect?: ZapWhereUniqueInput | ZapWhereUniqueInput[]
+  }
+
   export type StringFieldUpdateOperationsInput = {
     set?: string
+  }
+
+  export type ZapUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ZapCreateWithoutUserInput, ZapUncheckedCreateWithoutUserInput> | ZapCreateWithoutUserInput[] | ZapUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ZapCreateOrConnectWithoutUserInput | ZapCreateOrConnectWithoutUserInput[]
+    upsert?: ZapUpsertWithWhereUniqueWithoutUserInput | ZapUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ZapCreateManyUserInputEnvelope
+    set?: ZapWhereUniqueInput | ZapWhereUniqueInput[]
+    disconnect?: ZapWhereUniqueInput | ZapWhereUniqueInput[]
+    delete?: ZapWhereUniqueInput | ZapWhereUniqueInput[]
+    connect?: ZapWhereUniqueInput | ZapWhereUniqueInput[]
+    update?: ZapUpdateWithWhereUniqueWithoutUserInput | ZapUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ZapUpdateManyWithWhereWithoutUserInput | ZapUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ZapScalarWhereInput | ZapScalarWhereInput[]
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -11178,6 +11531,20 @@ export namespace Prisma {
     decrement?: number
     multiply?: number
     divide?: number
+  }
+
+  export type ZapUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<ZapCreateWithoutUserInput, ZapUncheckedCreateWithoutUserInput> | ZapCreateWithoutUserInput[] | ZapUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: ZapCreateOrConnectWithoutUserInput | ZapCreateOrConnectWithoutUserInput[]
+    upsert?: ZapUpsertWithWhereUniqueWithoutUserInput | ZapUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: ZapCreateManyUserInputEnvelope
+    set?: ZapWhereUniqueInput | ZapWhereUniqueInput[]
+    disconnect?: ZapWhereUniqueInput | ZapWhereUniqueInput[]
+    delete?: ZapWhereUniqueInput | ZapWhereUniqueInput[]
+    connect?: ZapWhereUniqueInput | ZapWhereUniqueInput[]
+    update?: ZapUpdateWithWhereUniqueWithoutUserInput | ZapUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: ZapUpdateManyWithWhereWithoutUserInput | ZapUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: ZapScalarWhereInput | ZapScalarWhereInput[]
   }
 
   export type TriggerCreateNestedOneWithoutZapInput = {
@@ -11198,6 +11565,12 @@ export namespace Prisma {
     connectOrCreate?: ZapRunCreateOrConnectWithoutZapInput | ZapRunCreateOrConnectWithoutZapInput[]
     createMany?: ZapRunCreateManyZapInputEnvelope
     connect?: ZapRunWhereUniqueInput | ZapRunWhereUniqueInput[]
+  }
+
+  export type UserCreateNestedOneWithoutZapsInput = {
+    create?: XOR<UserCreateWithoutZapsInput, UserUncheckedCreateWithoutZapsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutZapsInput
+    connect?: UserWhereUniqueInput
   }
 
   export type TriggerUncheckedCreateNestedOneWithoutZapInput = {
@@ -11258,6 +11631,14 @@ export namespace Prisma {
     deleteMany?: ZapRunScalarWhereInput | ZapRunScalarWhereInput[]
   }
 
+  export type UserUpdateOneRequiredWithoutZapsNestedInput = {
+    create?: XOR<UserCreateWithoutZapsInput, UserUncheckedCreateWithoutZapsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutZapsInput
+    upsert?: UserUpsertWithoutZapsInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutZapsInput, UserUpdateWithoutZapsInput>, UserUncheckedUpdateWithoutZapsInput>
+  }
+
   export type TriggerUncheckedUpdateOneWithoutZapNestedInput = {
     create?: XOR<TriggerCreateWithoutZapInput, TriggerUncheckedCreateWithoutZapInput>
     connectOrCreate?: TriggerCreateOrConnectWithoutZapInput
@@ -11296,9 +11677,9 @@ export namespace Prisma {
     deleteMany?: ZapRunScalarWhereInput | ZapRunScalarWhereInput[]
   }
 
-  export type AvailableTriggerCreateNestedOneWithoutTriggerInput = {
-    create?: XOR<AvailableTriggerCreateWithoutTriggerInput, AvailableTriggerUncheckedCreateWithoutTriggerInput>
-    connectOrCreate?: AvailableTriggerCreateOrConnectWithoutTriggerInput
+  export type AvailableTriggerCreateNestedOneWithoutTriggersInput = {
+    create?: XOR<AvailableTriggerCreateWithoutTriggersInput, AvailableTriggerUncheckedCreateWithoutTriggersInput>
+    connectOrCreate?: AvailableTriggerCreateOrConnectWithoutTriggersInput
     connect?: AvailableTriggerWhereUniqueInput
   }
 
@@ -11308,12 +11689,12 @@ export namespace Prisma {
     connect?: ZapWhereUniqueInput
   }
 
-  export type AvailableTriggerUpdateOneRequiredWithoutTriggerNestedInput = {
-    create?: XOR<AvailableTriggerCreateWithoutTriggerInput, AvailableTriggerUncheckedCreateWithoutTriggerInput>
-    connectOrCreate?: AvailableTriggerCreateOrConnectWithoutTriggerInput
-    upsert?: AvailableTriggerUpsertWithoutTriggerInput
+  export type AvailableTriggerUpdateOneRequiredWithoutTriggersNestedInput = {
+    create?: XOR<AvailableTriggerCreateWithoutTriggersInput, AvailableTriggerUncheckedCreateWithoutTriggersInput>
+    connectOrCreate?: AvailableTriggerCreateOrConnectWithoutTriggersInput
+    upsert?: AvailableTriggerUpsertWithoutTriggersInput
     connect?: AvailableTriggerWhereUniqueInput
-    update?: XOR<XOR<AvailableTriggerUpdateToOneWithWhereWithoutTriggerInput, AvailableTriggerUpdateWithoutTriggerInput>, AvailableTriggerUncheckedUpdateWithoutTriggerInput>
+    update?: XOR<XOR<AvailableTriggerUpdateToOneWithWhereWithoutTriggersInput, AvailableTriggerUpdateWithoutTriggersInput>, AvailableTriggerUncheckedUpdateWithoutTriggersInput>
   }
 
   export type ZapUpdateOneRequiredWithoutTriggerNestedInput = {
@@ -11330,10 +11711,10 @@ export namespace Prisma {
     connect?: ZapWhereUniqueInput
   }
 
-  export type AvailableActionsCreateNestedOneWithoutTriggerInput = {
-    create?: XOR<AvailableActionsCreateWithoutTriggerInput, AvailableActionsUncheckedCreateWithoutTriggerInput>
-    connectOrCreate?: AvailableActionsCreateOrConnectWithoutTriggerInput
-    connect?: AvailableActionsWhereUniqueInput
+  export type AvailableActionCreateNestedOneWithoutActionsInput = {
+    create?: XOR<AvailableActionCreateWithoutActionsInput, AvailableActionUncheckedCreateWithoutActionsInput>
+    connectOrCreate?: AvailableActionCreateOrConnectWithoutActionsInput
+    connect?: AvailableActionWhereUniqueInput
   }
 
   export type ZapUpdateOneRequiredWithoutActionsNestedInput = {
@@ -11344,12 +11725,12 @@ export namespace Prisma {
     update?: XOR<XOR<ZapUpdateToOneWithWhereWithoutActionsInput, ZapUpdateWithoutActionsInput>, ZapUncheckedUpdateWithoutActionsInput>
   }
 
-  export type AvailableActionsUpdateOneRequiredWithoutTriggerNestedInput = {
-    create?: XOR<AvailableActionsCreateWithoutTriggerInput, AvailableActionsUncheckedCreateWithoutTriggerInput>
-    connectOrCreate?: AvailableActionsCreateOrConnectWithoutTriggerInput
-    upsert?: AvailableActionsUpsertWithoutTriggerInput
-    connect?: AvailableActionsWhereUniqueInput
-    update?: XOR<XOR<AvailableActionsUpdateToOneWithWhereWithoutTriggerInput, AvailableActionsUpdateWithoutTriggerInput>, AvailableActionsUncheckedUpdateWithoutTriggerInput>
+  export type AvailableActionUpdateOneRequiredWithoutActionsNestedInput = {
+    create?: XOR<AvailableActionCreateWithoutActionsInput, AvailableActionUncheckedCreateWithoutActionsInput>
+    connectOrCreate?: AvailableActionCreateOrConnectWithoutActionsInput
+    upsert?: AvailableActionUpsertWithoutActionsInput
+    connect?: AvailableActionWhereUniqueInput
+    update?: XOR<XOR<AvailableActionUpdateToOneWithWhereWithoutActionsInput, AvailableActionUpdateWithoutActionsInput>, AvailableActionUncheckedUpdateWithoutActionsInput>
   }
 
   export type ActionCreateNestedManyWithoutTypeInput = {
@@ -11588,14 +11969,67 @@ export namespace Prisma {
     not?: InputJsonValue | JsonFieldRefInput<$PrismaModel> | JsonNullValueFilter
   }
 
+  export type ZapCreateWithoutUserInput = {
+    id?: string
+    triggerId: string
+    trigger?: TriggerCreateNestedOneWithoutZapInput
+    actions?: ActionCreateNestedManyWithoutZapInput
+    zapRuns?: ZapRunCreateNestedManyWithoutZapInput
+  }
+
+  export type ZapUncheckedCreateWithoutUserInput = {
+    id?: string
+    triggerId: string
+    trigger?: TriggerUncheckedCreateNestedOneWithoutZapInput
+    actions?: ActionUncheckedCreateNestedManyWithoutZapInput
+    zapRuns?: ZapRunUncheckedCreateNestedManyWithoutZapInput
+  }
+
+  export type ZapCreateOrConnectWithoutUserInput = {
+    where: ZapWhereUniqueInput
+    create: XOR<ZapCreateWithoutUserInput, ZapUncheckedCreateWithoutUserInput>
+  }
+
+  export type ZapCreateManyUserInputEnvelope = {
+    data: ZapCreateManyUserInput | ZapCreateManyUserInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ZapUpsertWithWhereUniqueWithoutUserInput = {
+    where: ZapWhereUniqueInput
+    update: XOR<ZapUpdateWithoutUserInput, ZapUncheckedUpdateWithoutUserInput>
+    create: XOR<ZapCreateWithoutUserInput, ZapUncheckedCreateWithoutUserInput>
+  }
+
+  export type ZapUpdateWithWhereUniqueWithoutUserInput = {
+    where: ZapWhereUniqueInput
+    data: XOR<ZapUpdateWithoutUserInput, ZapUncheckedUpdateWithoutUserInput>
+  }
+
+  export type ZapUpdateManyWithWhereWithoutUserInput = {
+    where: ZapScalarWhereInput
+    data: XOR<ZapUpdateManyMutationInput, ZapUncheckedUpdateManyWithoutUserInput>
+  }
+
+  export type ZapScalarWhereInput = {
+    AND?: ZapScalarWhereInput | ZapScalarWhereInput[]
+    OR?: ZapScalarWhereInput[]
+    NOT?: ZapScalarWhereInput | ZapScalarWhereInput[]
+    id?: StringFilter<"Zap"> | string
+    triggerId?: StringFilter<"Zap"> | string
+    userId?: IntFilter<"Zap"> | number
+  }
+
   export type TriggerCreateWithoutZapInput = {
     id?: string
-    type: AvailableTriggerCreateNestedOneWithoutTriggerInput
+    metadata?: JsonNullValueInput | InputJsonValue
+    type: AvailableTriggerCreateNestedOneWithoutTriggersInput
   }
 
   export type TriggerUncheckedCreateWithoutZapInput = {
     id?: string
     triggerId: string
+    metadata?: JsonNullValueInput | InputJsonValue
   }
 
   export type TriggerCreateOrConnectWithoutZapInput = {
@@ -11605,13 +12039,15 @@ export namespace Prisma {
 
   export type ActionCreateWithoutZapInput = {
     id?: string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: number
-    type: AvailableActionsCreateNestedOneWithoutTriggerInput
+    type: AvailableActionCreateNestedOneWithoutActionsInput
   }
 
   export type ActionUncheckedCreateWithoutZapInput = {
     id?: string
     actionId: string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: number
   }
 
@@ -11647,6 +12083,24 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type UserCreateWithoutZapsInput = {
+    name: string
+    email: string
+    password: string
+  }
+
+  export type UserUncheckedCreateWithoutZapsInput = {
+    id?: number
+    name: string
+    email: string
+    password: string
+  }
+
+  export type UserCreateOrConnectWithoutZapsInput = {
+    where: UserWhereUniqueInput
+    create: XOR<UserCreateWithoutZapsInput, UserUncheckedCreateWithoutZapsInput>
+  }
+
   export type TriggerUpsertWithoutZapInput = {
     update: XOR<TriggerUpdateWithoutZapInput, TriggerUncheckedUpdateWithoutZapInput>
     create: XOR<TriggerCreateWithoutZapInput, TriggerUncheckedCreateWithoutZapInput>
@@ -11660,12 +12114,14 @@ export namespace Prisma {
 
   export type TriggerUpdateWithoutZapInput = {
     id?: StringFieldUpdateOperationsInput | string
-    type?: AvailableTriggerUpdateOneRequiredWithoutTriggerNestedInput
+    metadata?: JsonNullValueInput | InputJsonValue
+    type?: AvailableTriggerUpdateOneRequiredWithoutTriggersNestedInput
   }
 
   export type TriggerUncheckedUpdateWithoutZapInput = {
     id?: StringFieldUpdateOperationsInput | string
     triggerId?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
   }
 
   export type ActionUpsertWithWhereUniqueWithoutZapInput = {
@@ -11691,6 +12147,7 @@ export namespace Prisma {
     id?: StringFilter<"Action"> | string
     zapId?: StringFilter<"Action"> | string
     actionId?: StringFilter<"Action"> | string
+    metadata?: JsonFilter<"Action">
     sortingOrder?: IntFilter<"Action"> | number
   }
 
@@ -11719,19 +12176,45 @@ export namespace Prisma {
     metadata?: JsonFilter<"ZapRun">
   }
 
-  export type AvailableTriggerCreateWithoutTriggerInput = {
-    id?: string
-    name: string
+  export type UserUpsertWithoutZapsInput = {
+    update: XOR<UserUpdateWithoutZapsInput, UserUncheckedUpdateWithoutZapsInput>
+    create: XOR<UserCreateWithoutZapsInput, UserUncheckedCreateWithoutZapsInput>
+    where?: UserWhereInput
   }
 
-  export type AvailableTriggerUncheckedCreateWithoutTriggerInput = {
-    id?: string
-    name: string
+  export type UserUpdateToOneWithWhereWithoutZapsInput = {
+    where?: UserWhereInput
+    data: XOR<UserUpdateWithoutZapsInput, UserUncheckedUpdateWithoutZapsInput>
   }
 
-  export type AvailableTriggerCreateOrConnectWithoutTriggerInput = {
+  export type UserUpdateWithoutZapsInput = {
+    name?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+  }
+
+  export type UserUncheckedUpdateWithoutZapsInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+  }
+
+  export type AvailableTriggerCreateWithoutTriggersInput = {
+    id?: string
+    name: string
+    image: string
+  }
+
+  export type AvailableTriggerUncheckedCreateWithoutTriggersInput = {
+    id?: string
+    name: string
+    image: string
+  }
+
+  export type AvailableTriggerCreateOrConnectWithoutTriggersInput = {
     where: AvailableTriggerWhereUniqueInput
-    create: XOR<AvailableTriggerCreateWithoutTriggerInput, AvailableTriggerUncheckedCreateWithoutTriggerInput>
+    create: XOR<AvailableTriggerCreateWithoutTriggersInput, AvailableTriggerUncheckedCreateWithoutTriggersInput>
   }
 
   export type ZapCreateWithoutTriggerInput = {
@@ -11739,11 +12222,13 @@ export namespace Prisma {
     triggerId: string
     actions?: ActionCreateNestedManyWithoutZapInput
     zapRuns?: ZapRunCreateNestedManyWithoutZapInput
+    user: UserCreateNestedOneWithoutZapsInput
   }
 
   export type ZapUncheckedCreateWithoutTriggerInput = {
     id?: string
     triggerId: string
+    userId: number
     actions?: ActionUncheckedCreateNestedManyWithoutZapInput
     zapRuns?: ZapRunUncheckedCreateNestedManyWithoutZapInput
   }
@@ -11753,25 +12238,27 @@ export namespace Prisma {
     create: XOR<ZapCreateWithoutTriggerInput, ZapUncheckedCreateWithoutTriggerInput>
   }
 
-  export type AvailableTriggerUpsertWithoutTriggerInput = {
-    update: XOR<AvailableTriggerUpdateWithoutTriggerInput, AvailableTriggerUncheckedUpdateWithoutTriggerInput>
-    create: XOR<AvailableTriggerCreateWithoutTriggerInput, AvailableTriggerUncheckedCreateWithoutTriggerInput>
+  export type AvailableTriggerUpsertWithoutTriggersInput = {
+    update: XOR<AvailableTriggerUpdateWithoutTriggersInput, AvailableTriggerUncheckedUpdateWithoutTriggersInput>
+    create: XOR<AvailableTriggerCreateWithoutTriggersInput, AvailableTriggerUncheckedCreateWithoutTriggersInput>
     where?: AvailableTriggerWhereInput
   }
 
-  export type AvailableTriggerUpdateToOneWithWhereWithoutTriggerInput = {
+  export type AvailableTriggerUpdateToOneWithWhereWithoutTriggersInput = {
     where?: AvailableTriggerWhereInput
-    data: XOR<AvailableTriggerUpdateWithoutTriggerInput, AvailableTriggerUncheckedUpdateWithoutTriggerInput>
+    data: XOR<AvailableTriggerUpdateWithoutTriggersInput, AvailableTriggerUncheckedUpdateWithoutTriggersInput>
   }
 
-  export type AvailableTriggerUpdateWithoutTriggerInput = {
+  export type AvailableTriggerUpdateWithoutTriggersInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
-  export type AvailableTriggerUncheckedUpdateWithoutTriggerInput = {
+  export type AvailableTriggerUncheckedUpdateWithoutTriggersInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
   export type ZapUpsertWithoutTriggerInput = {
@@ -11790,11 +12277,13 @@ export namespace Prisma {
     triggerId?: StringFieldUpdateOperationsInput | string
     actions?: ActionUpdateManyWithoutZapNestedInput
     zapRuns?: ZapRunUpdateManyWithoutZapNestedInput
+    user?: UserUpdateOneRequiredWithoutZapsNestedInput
   }
 
   export type ZapUncheckedUpdateWithoutTriggerInput = {
     id?: StringFieldUpdateOperationsInput | string
     triggerId?: StringFieldUpdateOperationsInput | string
+    userId?: IntFieldUpdateOperationsInput | number
     actions?: ActionUncheckedUpdateManyWithoutZapNestedInput
     zapRuns?: ZapRunUncheckedUpdateManyWithoutZapNestedInput
   }
@@ -11804,11 +12293,13 @@ export namespace Prisma {
     triggerId: string
     trigger?: TriggerCreateNestedOneWithoutZapInput
     zapRuns?: ZapRunCreateNestedManyWithoutZapInput
+    user: UserCreateNestedOneWithoutZapsInput
   }
 
   export type ZapUncheckedCreateWithoutActionsInput = {
     id?: string
     triggerId: string
+    userId: number
     trigger?: TriggerUncheckedCreateNestedOneWithoutZapInput
     zapRuns?: ZapRunUncheckedCreateNestedManyWithoutZapInput
   }
@@ -11818,19 +12309,21 @@ export namespace Prisma {
     create: XOR<ZapCreateWithoutActionsInput, ZapUncheckedCreateWithoutActionsInput>
   }
 
-  export type AvailableActionsCreateWithoutTriggerInput = {
+  export type AvailableActionCreateWithoutActionsInput = {
     id?: string
     name: string
+    image: string
   }
 
-  export type AvailableActionsUncheckedCreateWithoutTriggerInput = {
+  export type AvailableActionUncheckedCreateWithoutActionsInput = {
     id?: string
     name: string
+    image: string
   }
 
-  export type AvailableActionsCreateOrConnectWithoutTriggerInput = {
-    where: AvailableActionsWhereUniqueInput
-    create: XOR<AvailableActionsCreateWithoutTriggerInput, AvailableActionsUncheckedCreateWithoutTriggerInput>
+  export type AvailableActionCreateOrConnectWithoutActionsInput = {
+    where: AvailableActionWhereUniqueInput
+    create: XOR<AvailableActionCreateWithoutActionsInput, AvailableActionUncheckedCreateWithoutActionsInput>
   }
 
   export type ZapUpsertWithoutActionsInput = {
@@ -11849,38 +12342,43 @@ export namespace Prisma {
     triggerId?: StringFieldUpdateOperationsInput | string
     trigger?: TriggerUpdateOneWithoutZapNestedInput
     zapRuns?: ZapRunUpdateManyWithoutZapNestedInput
+    user?: UserUpdateOneRequiredWithoutZapsNestedInput
   }
 
   export type ZapUncheckedUpdateWithoutActionsInput = {
     id?: StringFieldUpdateOperationsInput | string
     triggerId?: StringFieldUpdateOperationsInput | string
+    userId?: IntFieldUpdateOperationsInput | number
     trigger?: TriggerUncheckedUpdateOneWithoutZapNestedInput
     zapRuns?: ZapRunUncheckedUpdateManyWithoutZapNestedInput
   }
 
-  export type AvailableActionsUpsertWithoutTriggerInput = {
-    update: XOR<AvailableActionsUpdateWithoutTriggerInput, AvailableActionsUncheckedUpdateWithoutTriggerInput>
-    create: XOR<AvailableActionsCreateWithoutTriggerInput, AvailableActionsUncheckedCreateWithoutTriggerInput>
-    where?: AvailableActionsWhereInput
+  export type AvailableActionUpsertWithoutActionsInput = {
+    update: XOR<AvailableActionUpdateWithoutActionsInput, AvailableActionUncheckedUpdateWithoutActionsInput>
+    create: XOR<AvailableActionCreateWithoutActionsInput, AvailableActionUncheckedCreateWithoutActionsInput>
+    where?: AvailableActionWhereInput
   }
 
-  export type AvailableActionsUpdateToOneWithWhereWithoutTriggerInput = {
-    where?: AvailableActionsWhereInput
-    data: XOR<AvailableActionsUpdateWithoutTriggerInput, AvailableActionsUncheckedUpdateWithoutTriggerInput>
+  export type AvailableActionUpdateToOneWithWhereWithoutActionsInput = {
+    where?: AvailableActionWhereInput
+    data: XOR<AvailableActionUpdateWithoutActionsInput, AvailableActionUncheckedUpdateWithoutActionsInput>
   }
 
-  export type AvailableActionsUpdateWithoutTriggerInput = {
+  export type AvailableActionUpdateWithoutActionsInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
-  export type AvailableActionsUncheckedUpdateWithoutTriggerInput = {
+  export type AvailableActionUncheckedUpdateWithoutActionsInput = {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
   }
 
   export type ActionCreateWithoutTypeInput = {
     id?: string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: number
     zap: ZapCreateNestedOneWithoutActionsInput
   }
@@ -11888,6 +12386,7 @@ export namespace Prisma {
   export type ActionUncheckedCreateWithoutTypeInput = {
     id?: string
     zapId: string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: number
   }
 
@@ -11919,12 +12418,14 @@ export namespace Prisma {
 
   export type TriggerCreateWithoutTypeInput = {
     id?: string
+    metadata?: JsonNullValueInput | InputJsonValue
     zap: ZapCreateNestedOneWithoutTriggerInput
   }
 
   export type TriggerUncheckedCreateWithoutTypeInput = {
     id?: string
     zapId: string
+    metadata?: JsonNullValueInput | InputJsonValue
   }
 
   export type TriggerCreateOrConnectWithoutTypeInput = {
@@ -11960,6 +12461,7 @@ export namespace Prisma {
     id?: StringFilter<"Trigger"> | string
     zapId?: StringFilter<"Trigger"> | string
     triggerId?: StringFilter<"Trigger"> | string
+    metadata?: JsonFilter<"Trigger">
   }
 
   export type ZapCreateWithoutZapRunsInput = {
@@ -11967,11 +12469,13 @@ export namespace Prisma {
     triggerId: string
     trigger?: TriggerCreateNestedOneWithoutZapInput
     actions?: ActionCreateNestedManyWithoutZapInput
+    user: UserCreateNestedOneWithoutZapsInput
   }
 
   export type ZapUncheckedCreateWithoutZapRunsInput = {
     id?: string
     triggerId: string
+    userId: number
     trigger?: TriggerUncheckedCreateNestedOneWithoutZapInput
     actions?: ActionUncheckedCreateNestedManyWithoutZapInput
   }
@@ -12010,11 +12514,13 @@ export namespace Prisma {
     triggerId?: StringFieldUpdateOperationsInput | string
     trigger?: TriggerUpdateOneWithoutZapNestedInput
     actions?: ActionUpdateManyWithoutZapNestedInput
+    user?: UserUpdateOneRequiredWithoutZapsNestedInput
   }
 
   export type ZapUncheckedUpdateWithoutZapRunsInput = {
     id?: StringFieldUpdateOperationsInput | string
     triggerId?: StringFieldUpdateOperationsInput | string
+    userId?: IntFieldUpdateOperationsInput | number
     trigger?: TriggerUncheckedUpdateOneWithoutZapNestedInput
     actions?: ActionUncheckedUpdateManyWithoutZapNestedInput
   }
@@ -12078,9 +12584,36 @@ export namespace Prisma {
     metadata?: JsonNullValueInput | InputJsonValue
   }
 
+  export type ZapCreateManyUserInput = {
+    id?: string
+    triggerId: string
+  }
+
+  export type ZapUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    triggerId?: StringFieldUpdateOperationsInput | string
+    trigger?: TriggerUpdateOneWithoutZapNestedInput
+    actions?: ActionUpdateManyWithoutZapNestedInput
+    zapRuns?: ZapRunUpdateManyWithoutZapNestedInput
+  }
+
+  export type ZapUncheckedUpdateWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    triggerId?: StringFieldUpdateOperationsInput | string
+    trigger?: TriggerUncheckedUpdateOneWithoutZapNestedInput
+    actions?: ActionUncheckedUpdateManyWithoutZapNestedInput
+    zapRuns?: ZapRunUncheckedUpdateManyWithoutZapNestedInput
+  }
+
+  export type ZapUncheckedUpdateManyWithoutUserInput = {
+    id?: StringFieldUpdateOperationsInput | string
+    triggerId?: StringFieldUpdateOperationsInput | string
+  }
+
   export type ActionCreateManyZapInput = {
     id?: string
     actionId: string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: number
   }
 
@@ -12091,19 +12624,22 @@ export namespace Prisma {
 
   export type ActionUpdateWithoutZapInput = {
     id?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: IntFieldUpdateOperationsInput | number
-    type?: AvailableActionsUpdateOneRequiredWithoutTriggerNestedInput
+    type?: AvailableActionUpdateOneRequiredWithoutActionsNestedInput
   }
 
   export type ActionUncheckedUpdateWithoutZapInput = {
     id?: StringFieldUpdateOperationsInput | string
     actionId?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: IntFieldUpdateOperationsInput | number
   }
 
   export type ActionUncheckedUpdateManyWithoutZapInput = {
     id?: StringFieldUpdateOperationsInput | string
     actionId?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: IntFieldUpdateOperationsInput | number
   }
 
@@ -12127,11 +12663,13 @@ export namespace Prisma {
   export type ActionCreateManyTypeInput = {
     id?: string
     zapId: string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: number
   }
 
   export type ActionUpdateWithoutTypeInput = {
     id?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: IntFieldUpdateOperationsInput | number
     zap?: ZapUpdateOneRequiredWithoutActionsNestedInput
   }
@@ -12139,33 +12677,39 @@ export namespace Prisma {
   export type ActionUncheckedUpdateWithoutTypeInput = {
     id?: StringFieldUpdateOperationsInput | string
     zapId?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: IntFieldUpdateOperationsInput | number
   }
 
   export type ActionUncheckedUpdateManyWithoutTypeInput = {
     id?: StringFieldUpdateOperationsInput | string
     zapId?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
     sortingOrder?: IntFieldUpdateOperationsInput | number
   }
 
   export type TriggerCreateManyTypeInput = {
     id?: string
     zapId: string
+    metadata?: JsonNullValueInput | InputJsonValue
   }
 
   export type TriggerUpdateWithoutTypeInput = {
     id?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
     zap?: ZapUpdateOneRequiredWithoutTriggerNestedInput
   }
 
   export type TriggerUncheckedUpdateWithoutTypeInput = {
     id?: StringFieldUpdateOperationsInput | string
     zapId?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
   }
 
   export type TriggerUncheckedUpdateManyWithoutTypeInput = {
     id?: StringFieldUpdateOperationsInput | string
     zapId?: StringFieldUpdateOperationsInput | string
+    metadata?: JsonNullValueInput | InputJsonValue
   }
 
 

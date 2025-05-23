@@ -44,6 +44,7 @@ router.post("/signup",async (req,res)=> {
 
 //@ts-ignore
 router.post("/signin",async(req,res)=>{
+    console.log(req.body)
      const body =req.body;
      const parsedData=SigninSchema.safeParse(body);
 

@@ -1,0 +1,7 @@
+- in frontend we create zap like select trigger(it tells where to get data like webhook from github,or google form)
+  and action (what to do when you get data like send email,send solana ,write entry on docs ,etc) and return user a  webook url to connect github or google docs etc
+- in Primary or main backend we just authenticate ,store zap recieved from backend to database and also frontend ask
+  main backend for list of available trigger and actions
+- hooks will get data from connected sites like github,goole docs etc and it simple store it to database 
+- processor simple get zap from database and publish it to kafka queue
+- worker takes zap from kafka queue and perform its actions 

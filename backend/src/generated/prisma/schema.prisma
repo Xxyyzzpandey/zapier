@@ -19,43 +19,50 @@ model User {
   name     String
   email    String
   password String
+  zaps     Zap[]
 }
 
 model Zap {
   id        String   @id @default(uuid())
   triggerId String
+  userId    Int
   trigger   Trigger?
   actions   Action[]
   zapRuns   ZapRun[]
+  user      User     @relation(fields: [userId], references: [id])
 }
 
 model Trigger {
   id        String           @id @default(uuid())
   zapId     String           @unique
   triggerId String
+  metadata  Json             @default("{}")
   type      AvailableTrigger @relation(fields: [triggerId], references: [id])
   zap       Zap              @relation(fields: [zapId], references: [id])
 }
 
 model Action {
-  id           String           @id @default(uuid())
+  id           String          @id @default(uuid())
   zapId        String
-  zap          Zap              @relation(fields: [zapId], references: [id])
+  zap          Zap             @relation(fields: [zapId], references: [id])
   actionId     String
-  type         AvailableActions @relation(fields: [actionId], references: [id])
-  sortingOrder Int              @default(09)
+  metadata     Json            @default("{}")
+  type         AvailableAction @relation(fields: [actionId], references: [id])
+  sortingOrder Int             @default(0)
 }
 
-model AvailableActions {
+model AvailableAction {
   id      String   @id @default(uuid())
   name    String
-  trigger Action[]
+  image   String
+  actions Action[]
 }
 
 model AvailableTrigger {
-  id      String    @id @default(uuid())
-  name    String
-  trigger Trigger[]
+  id       String    @id @default(uuid())
+  name     String
+  image    String
+  triggers Trigger[]
 }
 
 model ZapRun {
@@ -66,7 +73,6 @@ model ZapRun {
   zapRunOutbox ZapRunOutbox?
 }
 
-//outbox articture for microservices -> can read available on medium
 model ZapRunOutbox {
   id       String @id @default(uuid())
   zapRunId String @unique

@@ -148,7 +148,7 @@ exports.Prisma.ActionScalarFieldEnum = {
   sortingOrder: 'sortingOrder'
 };
 
-exports.Prisma.AvailableActionsScalarFieldEnum = {
+exports.Prisma.AvailableActionScalarFieldEnum = {
   id: 'id',
   name: 'name',
   image: 'image'
@@ -197,7 +197,7 @@ exports.Prisma.ModelName = {
   Zap: 'Zap',
   Trigger: 'Trigger',
   Action: 'Action',
-  AvailableActions: 'AvailableActions',
+  AvailableAction: 'AvailableAction',
   AvailableTrigger: 'AvailableTrigger',
   ZapRun: 'ZapRun',
   ZapRunOutbox: 'ZapRunOutbox'
