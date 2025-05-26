@@ -20,7 +20,7 @@ async function main(){
             where:{},
             take:10
         })
-        producer.send({
+        await producer.send({
             topic:TOPIC_NAME,
             messages:pendingRows.map(r =>({
                      value:r.zapRunId

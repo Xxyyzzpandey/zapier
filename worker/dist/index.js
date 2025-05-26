@@ -80,6 +80,9 @@ function main() {
                     console.log(`Sending out SOL of ${amount} to address ${address}`);
                     yield (0, solana_1.sendSol)(address, amount);
                 }
+                // if (currentAction.type.id === "notiondoc") {
+                //    //steps to write entry in notion docs
+                // }
                 const zapId = (_j = message.value) === null || _j === void 0 ? void 0 : _j.toString();
                 const lastStage = (((_k = zapRunDetails === null || zapRunDetails === void 0 ? void 0 : zapRunDetails.zap.actions) === null || _k === void 0 ? void 0 : _k.length) || 1) - 1;
                 if (lastStage !== stage) {

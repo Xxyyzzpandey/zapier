@@ -81,9 +81,9 @@ async function main(){
             await sendSol(address, amount);
             }
              
-            if (currentAction.type.id === "notiondoc") {
-               //steps to write entry in notion docs
-            }
+            // if (currentAction.type.id === "notiondoc") {
+            //    //steps to write entry in notion docs
+            // }
 
             const zapId=message.value?.toString();
             const lastStage=(zapRunDetails?.zap.actions?.length || 1)-1;

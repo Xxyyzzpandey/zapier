@@ -12,7 +12,6 @@ function parse(text, values, startDelimeter = "{", endDelimeter = "}") {
             while (text[endPoint] !== endDelimeter) {
                 endPoint++;
             }
-            // 
             let stringHoldingValue = text.slice(startIndex + 1, endPoint);
             const keys = stringHoldingValue.split(".");
             let localValues = Object.assign({}, values);

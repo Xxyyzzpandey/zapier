@@ -30,8 +30,8 @@ const transport = nodemailer_1.default.createTransport({
 function sendEmail(to, body) {
     return __awaiter(this, void 0, void 0, function* () {
         yield transport.sendMail({
-            from: "contact@100xdevs.com",
-            sender: "contact@100xdevs.com",
+            from: "conformation@gmail.com",
+            sender: "contact.zapierpro@gmail.com",
             to,
             subject: "Hello from Zapier",
             text: body
